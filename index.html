@@ -223,9 +223,7 @@
             color: var(--text-secondary); transition: all 0.2s;
         }
         .info-selected button:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-        /* ===== NOVOS ESTILOS ===== */
-        .progress-bar { height: 12px; background: var(--border); border-radius: 12px; overflow: hidden; margin-top: 10px; }
-        .progress-fill { height: 100%; border-radius: 12px; transition: width 0.6s ease; background: var(--accent); }
+        /* ===== ESTILOS AVANÇADOS ===== */
         .score-circle {
             width: 200px; height: 200px; border-radius: 50%; display: flex; flex-direction: column;
             align-items: center; justify-content: center; margin: 0 auto; color: #fff;
@@ -243,35 +241,105 @@
         .matrix-table { font-size: 0.62rem; }
         .matrix-table th, .matrix-table td { padding: 6px 5px; text-align: center; }
         .matrix-table th:first-child, .matrix-table td:first-child { text-align: left; position: sticky; left: 0; background: var(--card-solid); z-index: 2; }
-        .slider-row {
-            display: flex; align-items: center; gap: 12px; padding: 10px 14px;
-            background: var(--card-solid); border-radius: 14px; border: 1px solid var(--border);
-            margin-bottom: 8px;
+
+        /* ===== RELATÓRIO EXECUTIVO MELHORADO ===== */
+        .exec-hero {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
+            color: #fff; border-radius: 24px; padding: 28px 32px;
+            box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
         }
-        .slider-row input[type=range] { flex: 1; accent-color: var(--accent); }
-        .slider-row .slider-label { min-width: 150px; font-size: 0.78rem; font-weight: 600; }
-        .slider-row .slider-val { min-width: 60px; text-align: right; font-weight: 700; color: var(--accent); font-size: 0.85rem; }
+        .exec-hero::before {
+            content: ''; position: absolute; top: -50%; right: -10%; width: 400px; height: 400px;
+            background: rgba(255,255,255,0.08); border-radius: 50%;
+        }
+        .exec-hero h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; position: relative; }
+        .exec-hero p { font-size: 0.85rem; opacity: 0.9; position: relative; }
+        .exec-hero .exec-hero-date { font-size: 0.72rem; opacity: 0.75; margin-top: 8px; position: relative; }
+        .exec-status-badge {
+            display: inline-block; padding: 6px 16px; border-radius: 20px;
+            background: rgba(255,255,255,0.2); font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 1px; margin-top: 12px; position: relative;
+        }
+        .exec-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;
+        }
+        .exec-kpi-card {
+            background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 18px;
+            padding: 18px 20px; border: 1px solid var(--border); box-shadow: var(--shadow);
+            position: relative; overflow: hidden; transition: all 0.2s;
+        }
+        .exec-kpi-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .exec-kpi-card .kpi-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; }
+        .exec-kpi-card .kpi-value { font-size: 1.5rem; font-weight: 800; line-height: 1.1; }
+        .exec-kpi-card .kpi-sub { font-size: 0.7rem; color: var(--text-secondary); margin-top: 6px; font-weight: 600; }
+        .exec-kpi-card .kpi-trend { font-size: 0.68rem; font-weight: 700; margin-top: 6px; display: inline-block; padding: 2px 8px; border-radius: 10px; }
+        .kpi-trend.up { color: #166534; background: #dcfce7; }
+        .kpi-trend.down { color: #991b1b; background: #fee2e2; }
+        .kpi-trend.neutral { color: #92400e; background: #fef3c7; }
+        body.dark .kpi-trend.up { color: #6ee7b7; background: rgba(16,185,129,0.15); }
+        body.dark .kpi-trend.down { color: #fca5a5; background: rgba(239,68,68,0.15); }
+        body.dark .kpi-trend.neutral { color: #fbbf24; background: rgba(245,158,11,0.15); }
         .exec-section {
             background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 20px;
             padding: 22px 26px; border: 1px solid var(--border); box-shadow: var(--shadow);
         }
         .exec-section h3 {
-            font-size: 0.95rem; font-weight: 700; color: var(--accent);
-            margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px;
-            border-bottom: 2px solid var(--border); padding-bottom: 8px;
+            font-size: 0.95rem; font-weight: 800; color: var(--text);
+            margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;
+            border-bottom: 2px solid var(--border); padding-bottom: 10px;
+            display: flex; align-items: center; gap: 8px;
         }
-        .exec-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 14px; }
-        .exec-kpi { background: var(--card-solid); padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border); }
-        .exec-kpi .k { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); font-weight: 700; margin-bottom: 6px; }
-        .exec-kpi .v { font-size: 1.1rem; font-weight: 800; }
+        .exec-section h3 .h3-badge {
+            font-size: 0.6rem; padding: 3px 10px; border-radius: 12px;
+            background: var(--accent); color: #fff; font-weight: 700; letter-spacing: 0.5px;
+            text-transform: none;
+        }
         .exec-list { list-style: none; }
         .exec-list li {
-            padding: 8px 0; border-bottom: 1px dashed var(--border);
-            font-size: 0.82rem; display: flex; justify-content: space-between; gap: 12px;
+            padding: 10px 0; border-bottom: 1px dashed var(--border);
+            font-size: 0.82rem; display: flex; align-items: center; gap: 12px;
         }
         .exec-list li:last-child { border-bottom: none; }
-        .exec-list .lbl { font-weight: 600; }
-        .exec-list .val { font-weight: 800; color: var(--accent); }
+        .exec-list .rank-badge {
+            width: 26px; height: 26px; border-radius: 8px; display: flex;
+            align-items: center; justify-content: center; font-weight: 800;
+            font-size: 0.72rem; color: #fff; flex-shrink: 0;
+        }
+        .exec-list .lbl { font-weight: 600; flex: 1; }
+        .exec-list .val { font-weight: 800; color: var(--accent); font-size: 0.85rem; }
+        .exec-list .val-sub { font-size: 0.68rem; color: var(--text-secondary); font-weight: 600; margin-left: 4px; }
+        .exec-bar-wrap { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+        .exec-bar-bg { height: 8px; background: var(--border); border-radius: 8px; overflow: hidden; }
+        .exec-bar-fill { height: 100%; border-radius: 8px; transition: width 0.6s ease; }
+        .exec-alert {
+            padding: 14px 18px; border-radius: 14px; margin-bottom: 10px;
+            display: flex; gap: 12px; align-items: flex-start; font-size: 0.82rem;
+            border-left: 4px solid;
+        }
+        .exec-alert.warn { background: rgba(245,158,11,0.08); border-color: var(--warning); }
+        .exec-alert.danger { background: rgba(239,68,68,0.08); border-color: var(--danger); }
+        .exec-alert.ok { background: rgba(16,185,129,0.08); border-color: var(--success); }
+        .exec-alert.info { background: rgba(99,102,241,0.08); border-color: var(--accent); }
+        .exec-alert .alert-icon { font-size: 1.2rem; line-height: 1; }
+        .exec-alert .alert-text { flex: 1; line-height: 1.5; }
+        .exec-alert .alert-text strong { color: var(--text); }
+        .exec-insight {
+            padding: 14px 18px; border-radius: 14px; background: var(--card-solid);
+            border: 1px solid var(--border); margin-bottom: 10px; font-size: 0.82rem;
+            line-height: 1.6; color: var(--text-secondary);
+        }
+        .exec-insight strong { color: var(--text); font-weight: 700; }
+        .exec-comparativo-row {
+            display: grid; grid-template-columns: 1fr auto auto auto; gap: 14px;
+            padding: 12px 16px; background: var(--card-solid); border-radius: 12px;
+            border: 1px solid var(--border); align-items: center; margin-bottom: 8px;
+            font-size: 0.82rem;
+        }
+        .exec-comparativo-row .cmp-label { font-weight: 700; }
+        .exec-comparativo-row .cmp-val { font-weight: 700; text-align: right; min-width: 100px; }
+        @media (max-width: 768px) {
+            .exec-comparativo-row { grid-template-columns: 1fr 1fr; }
+        }
         @media (max-width:768px) {
             .sidebar { transform: translateX(-100%); width: 260px; }
             .sidebar.open { transform: translateX(0); }
@@ -280,8 +348,6 @@
             .menu-toggle { display: block; }
             .card { padding: 14px 18px; flex: 1 1 140px; }
             .card-value { font-size: 1.3rem; }
-            .slider-row { flex-wrap: wrap; }
-            .slider-row .slider-label { min-width: 100%; }
         }
     </style>
 </head>
@@ -311,14 +377,10 @@
             <button class="tab-btn" data-page="inadimplencia">🚨 <span class="nav-text">Inadimplência</span> <span class="badge" id="badgePendentes">0</span></button>
             <button class="tab-btn" data-page="calendario">📅 <span class="nav-text">Calendário</span></button>
             <div class="nav-section-label">🚀 Análises Avançadas</div>
-            <button class="tab-btn" data-page="fluxocaixa">💵 <span class="nav-text">Fluxo de Caixa</span></button>
-            <button class="tab-btn" data-page="metas">🎯 <span class="nav-text">Metas & Orçamento</span></button>
-            <button class="tab-btn" data-page="recorrencias">🔁 <span class="nav-text">Recorrências</span></button>
             <button class="tab-btn" data-page="topgastos">🏆 <span class="nav-text">Top Gastos</span></button>
             <button class="tab-btn" data-page="diasemana">📆 <span class="nav-text">Dia da Semana</span></button>
             <button class="tab-btn" data-page="centroscusto">🏢 <span class="nav-text">Centros de Custo</span></button>
             <button class="tab-btn" data-page="score">❤️ <span class="nav-text">Score Financeiro</span></button>
-            <button class="tab-btn" data-page="simulador">🎛️ <span class="nav-text">Simulador</span></button>
             <button class="tab-btn" data-page="matriz">🔢 <span class="nav-text">Matriz Cat×Mês</span></button>
             <button class="tab-btn" data-page="executivo">📑 <span class="nav-text">Relatório Executivo</span></button>
         </nav>
@@ -580,85 +642,7 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 1: FLUXO DE CAIXA ================= -->
-            <!-- ============================================================ -->
-            <div id="fluxocaixa" class="page">
-                <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">💰 Total Entradas</div><div class="card-value entrada" id="fcEntradas">R$ 0,00</div></div>
-                    <div class="card card-saida"><div class="card-title">📤 Total Saídas</div><div class="card-value saida" id="fcSaidas">R$ 0,00</div></div>
-                    <div class="card card-saldo"><div class="card-title">⚖️ Saldo Atual</div><div class="card-value saldo" id="fcSaldo">R$ 0,00</div></div>
-                    <div class="card"><div class="card-title">🔮 Saldo Projetado (6m)</div><div class="card-value" id="fcProjetado" style="color:var(--warning);">R$ 0,00</div></div>
-                </div>
-                <div class="chart-box"><h3>📈 Saldo Acumulado Real vs Projeção</h3><canvas id="fcGrafico"></canvas></div>
-                <div class="table-container" style="max-height:400px;">
-                    <table id="fcTabela">
-                        <thead><tr><th>Mês</th><th>Entradas</th><th>Saídas</th><th>Saldo do Mês</th><th>Acumulado</th></tr></thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 2: METAS & ORÇAMENTO ============== -->
-            <!-- ============================================================ -->
-            <div id="metas" class="page">
-                <div class="filter-bar">
-                    <div class="filter-group"><label>Ano</label><select id="metasAno"></select></div>
-                    <div class="filter-group"><label>Mês</label><select id="metasMes"></select></div>
-                    <div class="filter-group"><label>Meta Receita (R$)</label><input type="number" id="metaInputRec" step="0.01" placeholder="0,00"></div>
-                    <div class="filter-group"><label>Meta Despesa (R$)</label><input type="number" id="metaInputDes" step="0.01" placeholder="0,00"></div>
-                    <button class="btn" id="metaSalvarBtn" style="background:var(--accent);color:#fff;">💾 Salvar Metas</button>
-                </div>
-                <div class="cards-row">
-                    <div class="card card-entrada">
-                        <div class="card-title">🎯 Meta de Receita</div>
-                        <div class="card-value entrada" id="metaMetaRec">R$ 0,00</div>
-                    </div>
-                    <div class="card card-entrada">
-                        <div class="card-title">✅ Receita Realizada</div>
-                        <div class="card-value entrada" id="metaRealRec">R$ 0,00</div>
-                        <div class="progress-bar"><div class="progress-fill" id="metaBarRec" style="width:0%"></div></div>
-                        <div style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);margin-top:6px;" id="metaProgRec">Sem meta</div>
-                    </div>
-                    <div class="card card-saida">
-                        <div class="card-title">🎯 Meta de Despesa</div>
-                        <div class="card-value saida" id="metaMetaDes">R$ 0,00</div>
-                    </div>
-                    <div class="card card-saida">
-                        <div class="card-title">⚠️ Despesa Realizada</div>
-                        <div class="card-value saida" id="metaRealDes">R$ 0,00</div>
-                        <div class="progress-bar"><div class="progress-fill" id="metaBarDes" style="width:0%"></div></div>
-                        <div style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);margin-top:6px;" id="metaProgDes">Sem meta</div>
-                    </div>
-                </div>
-                <div class="table-container" style="max-height:520px;">
-                    <table id="metaTabela">
-                        <thead><tr><th>Mês</th><th>Meta Rec.</th><th>Receita</th><th>%</th><th>Meta Desp.</th><th>Despesa</th><th>%</th></tr></thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 3: RECORRÊNCIAS =================== -->
-            <!-- ============================================================ -->
-            <div id="recorrencias" class="page">
-                <div class="cards-row">
-                    <div class="card card-saida"><div class="card-title">🔁 Total Recorrente (Mensal)</div><div class="card-value saida" id="recTotalMensal">R$ 0,00</div></div>
-                    <div class="card"><div class="card-title">📋 Qtd. Recorrências</div><div class="card-value" id="recQtd" style="color:var(--purple);">0</div></div>
-                    <div class="card"><div class="card-title">📊 Média por Recorrência</div><div class="card-value" id="recMedia" style="color:var(--danger);">R$ 0,00</div></div>
-                </div>
-                <div class="chart-box"><h3>📊 Top 10 Gastos Recorrentes</h3><canvas id="recGrafico"></canvas></div>
-                <div class="table-container" style="max-height:520px;">
-                    <table id="recTabela">
-                        <thead><tr><th>Descrição</th><th>Categoria</th><th>Pessoa</th><th>Meses</th><th>Valor Médio</th><th>Total</th></tr></thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 4: TOP GASTOS ===================== -->
+            <!-- ============ TOP GASTOS ==================================== -->
             <!-- ============================================================ -->
             <div id="topgastos" class="page">
                 <div class="cards-row">
@@ -688,7 +672,7 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 5: DIA DA SEMANA ================== -->
+            <!-- ============ DIA DA SEMANA ================================= -->
             <!-- ============================================================ -->
             <div id="diasemana" class="page">
                 <div class="cards-row">
@@ -707,7 +691,7 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 6: CENTROS DE CUSTO =============== -->
+            <!-- ============ CENTROS DE CUSTO ============================== -->
             <!-- ============================================================ -->
             <div id="centroscusto" class="page">
                 <div class="cards-row">
@@ -725,7 +709,7 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 7: SCORE FINANCEIRO =============== -->
+            <!-- ============ SCORE FINANCEIRO ============================== -->
             <!-- ============================================================ -->
             <div id="score" class="page">
                 <div class="cards-row">
@@ -745,27 +729,7 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 8: SIMULADOR ====================== -->
-            <!-- ============================================================ -->
-            <div id="simulador" class="page">
-                <div class="cards-row">
-                    <div class="card card-saida"><div class="card-title">💸 Despesa Atual</div><div class="card-value saida" id="simDesAtual">R$ 0,00</div></div>
-                    <div class="card card-entrada"><div class="card-title">💚 Economia Possível</div><div class="card-value entrada" id="simEconomia">R$ 0,00</div></div>
-                    <div class="card card-saida"><div class="card-title">📤 Nova Despesa</div><div class="card-value saida" id="simNovaDes">R$ 0,00</div></div>
-                    <div class="card card-saldo"><div class="card-title">⚖️ Novo Resultado</div><div class="card-value saldo" id="simNovoRes">R$ 0,00</div></div>
-                </div>
-                <div class="chart-box">
-                    <h3>🎛️ Ajuste o corte de cada categoria</h3>
-                    <div id="simSliders" style="margin-top:8px;"></div>
-                </div>
-                <div class="charts-row">
-                    <div class="chart-box"><h3>🥧 Composição Após Simulação</h3><canvas id="simGrafico"></canvas></div>
-                    <div class="chart-box"><h3>📊 Antes vs Depois</h3><canvas id="simBar"></canvas></div>
-                </div>
-            </div>
-
-            <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 9: MATRIZ CAT × MÊS =============== -->
+            <!-- ============ MATRIZ CAT × MÊS ============================== -->
             <!-- ============================================================ -->
             <div id="matriz" class="page">
                 <div class="filter-bar">
@@ -782,31 +746,80 @@
             </div>
 
             <!-- ============================================================ -->
-            <!-- ============ NOVA PÁGINA 10: RELATÓRIO EXECUTIVO =========== -->
+            <!-- ============ RELATÓRIO EXECUTIVO MELHORADO ================= -->
             <!-- ============================================================ -->
             <div id="executivo" class="page">
-                <div class="exec-section">
-                    <h3>📊 Resumo Executivo</h3>
-                    <div class="exec-kpi-grid" id="execKpis"></div>
-                    <div id="execTexto" style="font-size:0.85rem;line-height:1.7;color:var(--text-secondary);"></div>
+                <!-- HERO -->
+                <div class="exec-hero">
+                    <h2>📑 Relatório Executivo</h2>
+                    <p>Análise consolidada da saúde financeira, tendências e insights estratégicos.</p>
+                    <div class="exec-hero-date" id="execData">Gerado em --</div>
+                    <span class="exec-status-badge" id="execStatusBadge">ANALISANDO...</span>
                 </div>
+
+                <!-- KPIs PRINCIPAIS -->
+                <div class="exec-grid" id="execKpisGrid"></div>
+
+                <!-- ALERTAS E RECOMENDAÇÕES -->
                 <div class="exec-section">
-                    <h3>🏆 Top 5 Categorias de Despesa</h3>
+                    <h3>🚨 Alertas & Recomendações <span class="h3-badge" id="execAlertCount">0</span></h3>
+                    <div id="execAlertas"></div>
+                </div>
+
+                <!-- DIAGNÓSTICO / INSIGHTS -->
+                <div class="exec-section">
+                    <h3>💡 Insights Estratégicos</h3>
+                    <div id="execInsights"></div>
+                </div>
+
+                <!-- COMPARATIVO MÊS ATUAL VS ANTERIOR -->
+                <div class="exec-section">
+                    <h3>📊 Comparativo Mês Atual vs Anterior</h3>
+                    <div id="execComparativo"></div>
+                </div>
+
+                <!-- GRÁFICOS -->
+                <div class="charts-row">
+                    <div class="chart-box"><h3>📈 Receitas, Despesas e Resultado (12 Meses)</h3><canvas id="execGraficoMensal"></canvas></div>
+                    <div class="chart-box"><h3>🥧 Composição das Despesas</h3><canvas id="execGraficoPizza"></canvas></div>
+                </div>
+
+                <!-- TOP CATEGORIAS -->
+                <div class="exec-section">
+                    <h3>🏆 Top 8 Categorias de Despesa</h3>
                     <ul class="exec-list" id="execTopCat"></ul>
                 </div>
-                <div class="exec-section">
-                    <h3>👥 Top 5 Pessoas / Fornecedores</h3>
-                    <ul class="exec-list" id="execTopPes"></ul>
+
+                <!-- TOP PESSOAS + BANCOS -->
+                <div class="charts-row">
+                    <div class="exec-section" style="flex:1 1 380px;">
+                        <h3>👥 Top 8 Pessoas / Fornecedores</h3>
+                        <ul class="exec-list" id="execTopPes"></ul>
+                    </div>
+                    <div class="exec-section" style="flex:1 1 380px;">
+                        <h3>🏦 Top 6 Bancos</h3>
+                        <ul class="exec-list" id="execTopBan"></ul>
+                    </div>
                 </div>
-                <div class="exec-section">
-                    <h3>🏦 Top 5 Bancos</h3>
-                    <ul class="exec-list" id="execTopBan"></ul>
+
+                <!-- MELHORES E PIORES MESES -->
+                <div class="charts-row">
+                    <div class="exec-section" style="flex:1 1 380px;">
+                        <h3>🏅 Top 5 Melhores Meses</h3>
+                        <ul class="exec-list" id="execMelhores"></ul>
+                    </div>
+                    <div class="exec-section" style="flex:1 1 380px;">
+                        <h3>⚠️ Top 5 Piores Meses</h3>
+                        <ul class="exec-list" id="execPiores"></ul>
+                    </div>
                 </div>
+
+                <!-- TABELA ÚLTIMOS 12 MESES -->
                 <div class="exec-section">
-                    <h3>📅 Últimos 6 Meses</h3>
+                    <h3>📅 Últimos 12 Meses</h3>
                     <div class="table-container" style="max-height:none;">
                         <table id="execTabela">
-                            <thead><tr><th>Mês</th><th>Receitas</th><th>Despesas</th><th>Saldo</th><th>Margem</th></tr></thead>
+                            <thead><tr><th>Mês</th><th>Receitas</th><th>Despesas</th><th>Resultado</th><th>Margem</th><th>Tendência</th></tr></thead>
                             <tbody></tbody>
                         </table>
                     </div>
@@ -993,12 +1006,6 @@
                 }));
             }
 
-            function getMonthlyData() { return cache.getM(() => {
-                const m = new Map();
-                for (const t of debitos) { const k = t.ano + '-' + String(t.mes).padStart(2, '0'); if (!m.has(k)) m.set(k, { rec: 0, des: 0 }); m.get(k).des += t.valor; }
-                for (const t of creditos) { const k = t.ano + '-' + String(t.mes).padStart(2, '0'); if (!m.has(k)) m.set(k, { rec: 0, des: 0 }); m.get(k).rec += t.valor; }
-                return m; }); }
-
             function sortBy(arr, field, dir) {
                 const s = [...arr];
                 s.sort((a, b) => {
@@ -1101,11 +1108,6 @@
                     amAno.innerHTML = '<option value="">Todos</option>' + anosUnicos.map(a => `<option value="${a}">${a}</option>`).join('');
                     if (anosUnicos.length > 0) amAno.value = String(anosUnicos[0]);
                 }
-                // NOVAS PÁGINAS
-                const metasAno = $('metasAno');
-                if (metasAno) { metasAno.innerHTML = anosTodos.map(a => `<option value="${a}">${a}</option>`).join(''); metasAno.value = new Date().getFullYear(); }
-                const metasMes = $('metasMes');
-                if (metasMes) { metasMes.innerHTML = mesesNom.map((n, i) => `<option value="${i+1}">${n}</option>`).join(''); metasMes.value = new Date().getMonth() + 1; }
                 const matrizAno = $('matrizAno');
                 if (matrizAno) { matrizAno.innerHTML = '<option value="">Todos</option>' + anosTodos.map(a => `<option value="${a}">${a}</option>`).join(''); }
             }
@@ -1468,143 +1470,7 @@
                     options: { responsive: true, maintainAspectRatio: false, plugins: { tooltip: { callbacks: { label: x => `Acumulado: R$ ${fm(x.raw)}` } } }, scales: { y: { ticks: { callback: v => `R$ ${fm(v)}` } } } } });
             }
 
-            /* ========================================================== */
-            /* ============ NOVAS FUNÇÕES DAS 10 PÁGINAS ================ */
-            /* ========================================================== */
-
-            /* === 1. FLUXO DE CAIXA === */
-            function updateFluxoCaixa() {
-                const all = [...creditos, ...debitos];
-                const mm = new Map();
-                for (const t of all) {
-                    const k = `${t.ano}-${String(t.mes).padStart(2,'0')}`;
-                    if (!mm.has(k)) mm.set(k, { ent: 0, sai: 0 });
-                    const e = mm.get(k);
-                    if (t.tipo === 'credito') e.ent += t.valor; else e.sai += t.valor;
-                }
-                const ks = [...mm.keys()].sort(compareMonthKeys);
-                if (!ks.length) { ['fcEntradas','fcSaidas','fcSaldo','fcProjetado'].forEach(id => animKPI(id, 0)); destroy('fcGrafico'); return; }
-                let acc = 0;
-                const accArr = ks.map(k => { acc += mm.get(k).ent - mm.get(k).sai; return acc; });
-                const totEnt = sumBy(creditos, () => true), totSai = sumBy(debitos, () => true);
-                const lastN = ks.slice(-3);
-                const avgEnt = lastN.reduce((a, k) => a + mm.get(k).ent, 0) / (lastN.length || 1);
-                const avgSai = lastN.reduce((a, k) => a + mm.get(k).sai, 0) / (lastN.length || 1);
-                const projLabels = [], projAcc = [];
-                let pacc = acc;
-                const [ly, lm] = ks[ks.length - 1].split('-').map(Number);
-                for (let i = 1; i <= 6; i++) {
-                    pacc += avgEnt - avgSai;
-                    const nm = lm + i;
-                    const yy = ly + Math.floor((nm - 1) / 12);
-                    const mmn = ((nm - 1) % 12) + 1;
-                    projLabels.push(`${mesesAbrev[mmn-1]}/${yy}`);
-                    projAcc.push(pacc);
-                }
-                animKPI('fcEntradas', totEnt); animKPI('fcSaidas', totSai);
-                animKPI('fcSaldo', totEnt - totSai); animKPI('fcProjetado', pacc);
-                const labels = [...ks.map(k => { const [y, m] = k.split('-'); return `${mesesAbrev[+m-1]}/${y}`; }), ...projLabels];
-                const realData = [...accArr, ...Array(projLabels.length).fill(null)];
-                const projData = [...Array(ks.length - 1).fill(null), accArr[accArr.length - 1], ...projAcc];
-                line('fcGrafico', labels, [
-                    { label: 'Saldo Real', data: realData, borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.1)', fill: true },
-                    { label: 'Projeção', data: projData, borderColor: '#f59e0b', borderDash: [6, 4], fill: false }
-                ]);
-                const tb = document.querySelector('#fcTabela tbody');
-                if (tb) {
-                    tb.innerHTML = ''; const frag = document.createDocumentFragment();
-                    ks.forEach((k, i) => {
-                        const [y, m] = k.split('-'); const d = mm.get(k); const saldo = d.ent - d.sai;
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `<td>${mesesAbrev[+m-1]}/${y}</td><td style="color:var(--success)">R$ ${fm(d.ent)}</td><td style="color:var(--danger)">R$ ${fm(d.sai)}</td><td style="color:${saldo>=0?'var(--success)':'var(--danger)'};font-weight:600">R$ ${fm(saldo)}</td><td style="color:${accArr[i]>=0?'var(--success)':'var(--danger)'}">R$ ${fm(accArr[i])}</td>`;
-                        frag.appendChild(tr);
-                    });
-                    tb.appendChild(frag);
-                }
-            }
-
-            /* === 2. METAS & ORÇAMENTO === */
-            function updateMetas() {
-                const ano = +($('metasAno')?.value || new Date().getFullYear());
-                const mes = +($('metasMes')?.value || new Date().getMonth() + 1);
-                const metaRec = parseFloat(localStorage.getItem(`meta_rec_${ano}_${mes}`)) || 0;
-                const metaDes = parseFloat(localStorage.getItem(`meta_des_${ano}_${mes}`)) || 0;
-                if ($('metaInputRec')) $('metaInputRec').value = metaRec || '';
-                if ($('metaInputDes')) $('metaInputDes').value = metaDes || '';
-                const rec = sumBy(creditos.filter(t => t.ano === ano && t.mes === mes), () => true);
-                const des = sumBy(debitos.filter(t => t.ano === ano && t.mes === mes), () => true);
-                animKPI('metaMetaRec', metaRec); animKPI('metaRealRec', rec);
-                const pR = metaRec > 0 ? (rec / metaRec) * 100 : 0;
-                if ($('metaProgRec')) $('metaProgRec').textContent = metaRec > 0 ? fmp(pR) + ' da meta' : 'Sem meta';
-                if ($('metaBarRec')) { $('metaBarRec').style.width = Math.min(100, pR) + '%'; $('metaBarRec').style.background = pR >= 100 ? 'var(--success)' : 'var(--accent)'; }
-                animKPI('metaMetaDes', metaDes); animKPI('metaRealDes', des);
-                const pD = metaDes > 0 ? (des / metaDes) * 100 : 0;
-                if ($('metaProgDes')) $('metaProgDes').textContent = metaDes > 0 ? fmp(pD) + ' da meta' : 'Sem meta';
-                if ($('metaBarDes')) { $('metaBarDes').style.width = Math.min(100, pD) + '%'; $('metaBarDes').style.background = pD <= 100 ? 'var(--success)' : 'var(--danger)'; }
-                const tb = document.querySelector('#metaTabela tbody');
-                if (tb) {
-                    tb.innerHTML = ''; const frag = document.createDocumentFragment();
-                    for (let m = 1; m <= 12; m++) {
-                        const r = sumBy(creditos.filter(t => t.ano === ano && t.mes === m), () => true);
-                        const d = sumBy(debitos.filter(t => t.ano === ano && t.mes === m), () => true);
-                        const mr = parseFloat(localStorage.getItem(`meta_rec_${ano}_${m}`)) || 0;
-                        const md = parseFloat(localStorage.getItem(`meta_des_${ano}_${m}`)) || 0;
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `<td>${mesesNom[m-1]}</td><td>R$ ${fm(mr)}</td><td style="color:var(--success)">R$ ${fm(r)}</td><td>${mr>0?fmp((r/mr)*100):'-'}</td><td>R$ ${fm(md)}</td><td style="color:var(--danger)">R$ ${fm(d)}</td><td>${md>0?fmp((d/md)*100):'-'}</td>`;
-                        frag.appendChild(tr);
-                    }
-                    tb.appendChild(frag);
-                }
-            }
-
-            function initMetasEvents() {
-                const btn = $('metaSalvarBtn');
-                if (btn) btn.onclick = () => {
-                    const ano = +($('metasAno').value), mes = +($('metasMes').value);
-                    const vr = parseFloat($('metaInputRec').value) || 0;
-                    const vd = parseFloat($('metaInputDes').value) || 0;
-                    localStorage.setItem(`meta_rec_${ano}_${mes}`, vr);
-                    localStorage.setItem(`meta_des_${ano}_${mes}`, vd);
-                    toast('✅ Metas salvas!', 'success');
-                    updateMetas();
-                };
-                ['metasAno','metasMes'].forEach(id => { const el = $(id); if (el) el.onchange = updateMetas; });
-            }
-
-            /* === 3. RECORRÊNCIAS === */
-            function updateRecorrencias() {
-                const map = new Map();
-                for (const t of debitos) {
-                    const key = (t.descricao || '').toLowerCase().trim();
-                    if (!key) continue;
-                    if (!map.has(key)) map.set(key, { desc: t.descricao, valores: [], meses: new Set(), total: 0, cat: t.categoria, pessoa: t.pessoa });
-                    const e = map.get(key);
-                    e.valores.push(t.valor);
-                    e.meses.add(`${t.ano}-${t.mes}`);
-                    e.total += t.valor;
-                }
-                const recorrentes = [...map.values()].filter(e => e.meses.size >= 3).map(e => ({
-                    desc: e.desc, cat: e.cat, pessoa: e.pessoa, nMeses: e.meses.size,
-                    media: e.total / e.valores.length, total: e.total
-                })).sort((a, b) => b.total - a.total);
-                const totMensal = recorrentes.reduce((a, b) => a + b.media, 0);
-                animKPI('recTotalMensal', totMensal);
-                $('recQtd').textContent = recorrentes.length;
-                animKPI('recMedia', recorrentes.length ? totMensal / recorrentes.length : 0);
-                bar('recGrafico', recorrentes.slice(0, 10).map(r => r.desc.substring(0, 25)), recorrentes.slice(0, 10).map(r => r.total), '#f59e0b', true);
-                const tb = document.querySelector('#recTabela tbody');
-                if (tb) {
-                    tb.innerHTML = ''; const frag = document.createDocumentFragment();
-                    for (const r of recorrentes) {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `<td><strong>${r.desc}</strong></td><td>${r.cat}</td><td>${r.pessoa}</td><td>${r.nMeses} meses</td><td style="color:var(--warning);font-weight:600">R$ ${fm(r.media)}</td><td style="font-weight:700">R$ ${fm(r.total)}</td>`;
-                        frag.appendChild(tr);
-                    }
-                    tb.appendChild(frag);
-                }
-            }
-
-            /* === 4. TOP GASTOS === */
+            /* ===== TOP GASTOS ===== */
             function updateTopGastos() {
                 const topDes = [...debitos].sort((a, b) => b.valor - a.valor).slice(0, 20);
                 const topRec = [...creditos].sort((a, b) => b.valor - a.valor).slice(0, 20);
@@ -1625,7 +1491,7 @@
                 });
             }
 
-            /* === 5. DIA DA SEMANA === */
+            /* ===== DIA DA SEMANA ===== */
             function updateDiaSemana() {
                 const dias = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
                 const diasAbv = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
@@ -1657,7 +1523,7 @@
                 }
             }
 
-            /* === 6. CENTROS DE CUSTO === */
+            /* ===== CENTROS DE CUSTO ===== */
             function updateCentrosCusto() {
                 const totalDes = sumBy(debitos, () => true);
                 const catMap = aggregateBy(debitos, t => t.categoria, t => t.valor);
@@ -1688,7 +1554,7 @@
                 }
             }
 
-            /* === 7. SCORE FINANCEIRO === */
+            /* ===== SCORE FINANCEIRO ===== */
             function updateScore() {
                 const totRec = sumBy(creditos, () => true), totDes = sumBy(debitos, () => true);
                 const margem = totRec > 0 ? (totRec - totDes) / totRec : 0;
@@ -1735,51 +1601,7 @@
                     [ptMargem, ptPoup, ptInad, ptCons], ['#6366f1','#10b981','#f59e0b','#8b5cf6']);
             }
 
-            /* === 8. SIMULADOR === */
-            let simLoaded = false;
-            function initSimulador() {
-                if (simLoaded) return;
-                const cat = aggregateBy(debitos, t => t.categoria, t => t.valor);
-                const top = [...cat.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10);
-                const container = $('simSliders');
-                if (!container) return;
-                container.innerHTML = top.map(([c, v]) => `
-                    <div class="slider-row" data-cat="${c.replace(/"/g,'')}">
-                        <span class="slider-label">${c}</span>
-                        <input type="range" min="0" max="100" value="0" data-valor="${v}">
-                        <span class="slider-val">0%</span>
-                    </div>
-                `).join('');
-                container.querySelectorAll('input[type=range]').forEach(inp => {
-                    inp.oninput = () => {
-                        inp.parentElement.querySelector('.slider-val').textContent = inp.value + '%';
-                        calcSimulador();
-                    };
-                });
-                simLoaded = true;
-                calcSimulador();
-            }
-            function calcSimulador() {
-                const totRec = sumBy(creditos, () => true), totDes = sumBy(debitos, () => true);
-                let economia = 0;
-                document.querySelectorAll('#simSliders .slider-row').forEach(row => {
-                    const inp = row.querySelector('input');
-                    const v = parseFloat(inp.dataset.valor);
-                    const p = parseFloat(inp.value) / 100;
-                    economia += v * p;
-                });
-                const novaDes = totDes - economia, novoRes = totRec - novaDes;
-                animKPI('simDesAtual', totDes); animKPI('simEconomia', economia);
-                animKPI('simNovaDes', novaDes); animKPI('simNovoRes', novoRes);
-                doughnut('simGrafico', ['Despesas Mantidas','Economia'], [novaDes, economia], ['#ef4444','#10b981']);
-                const c = ctx('simBar');
-                if (c) charts['simBar'] = new Chart(c, { type: 'bar', data: { labels: ['Antes','Depois'], datasets: [
-                    { label: 'Receita', data: [totRec, totRec], backgroundColor: '#10b981', borderRadius: 6 },
-                    { label: 'Despesa', data: [totDes, novaDes], backgroundColor: '#ef4444', borderRadius: 6 }] },
-                    options: { responsive: true, maintainAspectRatio: false, plugins: { tooltip: { callbacks: { label: x => `${x.dataset.label}: R$ ${fm(x.raw)}` } } }, scales: { y: { ticks: { callback: v => `R$ ${fm(v)}` } } } } });
-            }
-
-            /* === 9. MATRIZ CAT × MÊS === */
+            /* ===== MATRIZ CAT × MÊS ===== */
             function updateMatriz() {
                 const ano = $('matrizAno')?.value || '';
                 const tipo = $('matrizTipo')?.value || 'debito';
@@ -1814,59 +1636,400 @@
                 }
             }
 
-            /* === 10. RELATÓRIO EXECUTIVO === */
+            /* ================================================================ */
+            /* ===== RELATÓRIO EXECUTIVO MELHORADO ============================ */
+            /* ================================================================ */
             function updateExecutivo() {
-                const totRec = sumBy(creditos, () => true), totDes = sumBy(debitos, () => true);
-                const res = totRec - totDes, mg = totRec > 0 ? (res / totRec) * 100 : 0;
-                const kpis = [
-                    { k: 'Receita Total', v: `R$ ${fm(totRec)}`, c: 'var(--success)' },
-                    { k: 'Despesa Total', v: `R$ ${fm(totDes)}`, c: 'var(--danger)' },
-                    { k: 'Resultado', v: `R$ ${fm(res)}`, c: res >= 0 ? 'var(--success)' : 'var(--danger)' },
-                    { k: 'Margem', v: fmp(mg), c: mg >= 0 ? 'var(--success)' : 'var(--danger)' },
-                    { k: 'Nº Transações', v: String(creditos.length + debitos.length), c: 'var(--purple)' },
-                    { k: 'Ticket Médio', v: `R$ ${fm((creditos.length + debitos.length) ? (totRec + totDes) / (creditos.length + debitos.length) : 0)}`, c: 'var(--accent)' }
-                ];
-                const grid = $('execKpis');
-                if (grid) grid.innerHTML = kpis.map(k => `<div class="exec-kpi"><div class="k">${k.k}</div><div class="v" style="color:${k.c}">${k.v}</div></div>`).join('');
-                const texto = $('execTexto');
-                if (texto) {
-                    const tend = res >= 0 ? 'positivo' : 'negativo';
-                    const mesesTot = new Set([...creditos, ...debitos].map(t => `${t.ano}-${t.mes}`)).size;
-                    texto.innerHTML = `O período analisado contempla <strong>${mesesTot} mês(es)</strong> com movimentação financeira. A receita totalizou <strong>R$ ${fm(totRec)}</strong> enquanto as despesas somaram <strong>R$ ${fm(totDes)}</strong>, resultando em um saldo <strong>${tend}</strong> de <strong>R$ ${fm(res)}</strong> (margem de <strong>${fmp(mg)}</strong>). ` +
-                        (mg >= 20 ? 'A margem líquida está em patamar saudável. ' : mg >= 0 ? 'A margem é positiva, mas requer atenção para otimização. ' : 'A operação está deficitária e necessita de revisão de despesas. ') +
-                        `Foram processadas <strong>${creditos.length}</strong> entradas e <strong>${debitos.length}</strong> saídas no período.`;
+                const all = [...creditos, ...debitos];
+                const totRec = sumBy(creditos, () => true);
+                const totDes = sumBy(debitos, () => true);
+                const res = totRec - totDes;
+                const mg = totRec > 0 ? (res / totRec) * 100 : 0;
+
+                // Data de geração
+                const agora = new Date();
+                if ($('execData')) {
+                    $('execData').textContent = `Gerado em ${agora.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })} às ${agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
                 }
-                const topCat = aggregateBy(debitos, t => t.categoria, t => t.valor);
-                const catArr = [...topCat.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
-                const catList = $('execTopCat');
-                if (catList) catList.innerHTML = catArr.map(([c, v], i) => `<li><span class="lbl">${i+1}. ${c}</span><span class="val">R$ ${fm(v)} (${totDes>0?fmp((v/totDes)*100):'0,0%'})</span></li>`).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
-                const topPes = aggregateBy(debitos, t => t.pessoa, t => t.valor);
-                const pesArr = [...topPes.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
-                const pesList = $('execTopPes');
-                if (pesList) pesList.innerHTML = pesArr.map(([c, v], i) => `<li><span class="lbl">${i+1}. ${c}</span><span class="val">R$ ${fm(v)}</span></li>`).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
-                const topBan = aggregateBy(debitos, t => t.banco, t => t.valor);
-                const banArr = [...topBan.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
-                const banList = $('execTopBan');
-                if (banList) banList.innerHTML = banArr.map(([c, v], i) => `<li><span class="lbl">${i+1}. ${c}</span><span class="val">R$ ${fm(v)}</span></li>`).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
+
+                // Status badge
+                const score = calcularScore();
+                const statusBadge = $('execStatusBadge');
+                if (statusBadge) {
+                    const statusLabel = score >= 75 ? '🟢 SAUDÁVEL' : score >= 50 ? '🟡 ATENÇÃO' : '🔴 CRÍTICO';
+                    statusBadge.textContent = `STATUS: ${statusLabel} • SCORE ${score}/100`;
+                }
+
+                // Mapa mensal
                 const mm = new Map();
-                for (const t of [...creditos, ...debitos]) {
+                for (const t of all) {
                     const k = `${t.ano}-${String(t.mes).padStart(2,'0')}`;
-                    if (!mm.has(k)) mm.set(k, { rec: 0, des: 0, ano: t.ano, mes: t.mes });
+                    if (!mm.has(k)) mm.set(k, { rec: 0, des: 0, ano: t.ano, mes: t.mes, qtd: 0 });
                     const e = mm.get(k);
                     if (t.tipo === 'credito') e.rec += t.valor; else e.des += t.valor;
+                    e.qtd++;
                 }
-                const ks = [...mm.keys()].sort(compareMonthKeys).slice(-6);
+                const ks = [...mm.keys()].sort(compareMonthKeys);
+
+                // Últimos 3 meses para comparação
+                const ultimoK = ks[ks.length - 1];
+                const penultimoK = ks[ks.length - 2];
+                const ultimo = ultimoK ? mm.get(ultimoK) : null;
+                const penultimo = penultimoK ? mm.get(penultimoK) : null;
+
+                // ===== KPIs PRINCIPAIS =====
+                const mesesAtivos = ks.length;
+                const mediaRec = mesesAtivos ? totRec / mesesAtivos : 0;
+                const mediaDes = mesesAtivos ? totDes / mesesAtivos : 0;
+                const ticketMedio = all.length ? (totRec + totDes) / all.length : 0;
+                const pend = all.filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s === 'false'; });
+                const totPend = sumBy(pend, () => true);
+
+                // Variação mês atual vs anterior
+                let varRec = 0, varDes = 0, varRes = 0;
+                if (ultimo && penultimo) {
+                    varRec = penultimo.rec > 0 ? ((ultimo.rec - penultimo.rec) / penultimo.rec) * 100 : 0;
+                    varDes = penultimo.des > 0 ? ((ultimo.des - penultimo.des) / penultimo.des) * 100 : 0;
+                    const resU = ultimo.rec - ultimo.des, resP = penultimo.rec - penultimo.des;
+                    varRes = resP !== 0 ? ((resU - resP) / Math.abs(resP)) * 100 : 0;
+                }
+
+                const kpis = [
+                    { k: '💰 Receita Total', v: `R$ ${fm(totRec)}`, sub: `${creditos.length} entradas`, trend: varRec, trendLabel: 'vs mês anterior', color: 'var(--success)' },
+                    { k: '📤 Despesa Total', v: `R$ ${fm(totDes)}`, sub: `${debitos.length} saídas`, trend: varDes, trendLabel: 'vs mês anterior', color: 'var(--danger)', invertTrend: true },
+                    { k: '⚖️ Resultado', v: `R$ ${fm(res)}`, sub: `Margem ${fmp(mg)}`, trend: varRes, trendLabel: 'vs mês anterior', color: res >= 0 ? 'var(--success)' : 'var(--danger)' },
+                    { k: '📊 Média Mensal Rec.', v: `R$ ${fm(mediaRec)}`, sub: `${mesesAtivos} meses ativos`, trend: null, color: 'var(--accent)' },
+                    { k: '📊 Média Mensal Desp.', v: `R$ ${fm(mediaDes)}`, sub: `Ticket médio R$ ${fm(ticketMedio)}`, trend: null, color: 'var(--warning)' },
+                    { k: '⚠️ Pendências', v: `R$ ${fm(totPend)}`, sub: `${pend.length} transações`, trend: null, color: 'var(--purple)' }
+                ];
+                const grid = $('execKpisGrid');
+                if (grid) {
+                    grid.innerHTML = kpis.map(k => {
+                        let trendHtml = '';
+                        if (k.trend !== null && k.trend !== undefined && isFinite(k.trend)) {
+                            const up = k.trend > 0;
+                            const good = k.invertTrend ? !up : up;
+                            const cls = Math.abs(k.trend) < 0.5 ? 'neutral' : (good ? 'up' : 'down');
+                            const arrow = Math.abs(k.trend) < 0.5 ? '→' : (up ? '▲' : '▼');
+                            trendHtml = `<span class="kpi-trend ${cls}">${arrow} ${fmp(Math.abs(k.trend))} ${k.trendLabel}</span>`;
+                        }
+                        return `<div class="exec-kpi-card">
+                            <div class="kpi-label">${k.k}</div>
+                            <div class="kpi-value" style="color:${k.color}">${k.v}</div>
+                            <div class="kpi-sub">${k.sub}</div>
+                            ${trendHtml}
+                        </div>`;
+                    }).join('');
+                }
+
+                // ===== ALERTAS =====
+                const alertas = [];
+                // Alerta de margem
+                if (mg < 0) alertas.push({ tipo: 'danger', icon: '🚨', texto: `<strong>Operação deficitária:</strong> A margem está negativa em <strong>${fmp(mg)}</strong>. As despesas superam as receitas em <strong>R$ ${fm(Math.abs(res))}</strong>. Recomenda-se revisar urgentemente os gastos.` });
+                else if (mg < 10) alertas.push({ tipo: 'warn', icon: '⚠️', texto: `<strong>Margem apertada:</strong> A margem de <strong>${fmp(mg)}</strong> está abaixo do ideal (mínimo recomendado: 20%). Há pouco espaço para imprevistos.` });
+                else if (mg >= 20) alertas.push({ tipo: 'ok', icon: '✅', texto: `<strong>Margem saudável:</strong> A margem de <strong>${fmp(mg)}</strong> indica boa eficiência operacional. Continue monitorando.` });
+
+                // Alerta de inadimplência
+                const inadimPct = (totRec + totDes) > 0 ? (totPend / (totRec + totDes)) * 100 : 0;
+                if (inadimPct > 10) alertas.push({ tipo: 'danger', icon: '💸', texto: `<strong>Inadimplência alta:</strong> <strong>R$ ${fm(totPend)}</strong> (${fmp(inadimPct)} do volume) estão pendentes em <strong>${pend.length} transações</strong>. Priorize a cobrança.` });
+                else if (inadimPct > 5) alertas.push({ tipo: 'warn', icon: '⏳', texto: `<strong>Atenção à inadimplência:</strong> <strong>R$ ${fm(totPend)}</strong> em ${pend.length} transações pendentes. Monitore de perto.` });
+
+                // Alerta de crescimento de despesa
+                if (ultimo && penultimo && varDes > 15) alertas.push({ tipo: 'warn', icon: '📈', texto: `<strong>Despesas em alta:</strong> As despesas cresceram <strong>${fmp(varDes)}</strong> no último mês. Revise os principais aumentos.` });
+
+                // Alerta de queda de receita
+                if (ultimo && penultimo && varRec < -10) alertas.push({ tipo: 'danger', icon: '📉', texto: `<strong>Queda de receita:</strong> A receita caiu <strong>${fmp(Math.abs(varRec))}</strong> no último mês. Investigue as causas.` });
+
+                // Concentração em categorias
+                const catMap = aggregateBy(debitos, t => t.categoria, t => t.valor);
+                const catArr = [...catMap.entries()].sort((a, b) => b[1] - a[1]);
+                if (catArr.length && totDes > 0) {
+                    const topPct = (catArr[0][1] / totDes) * 100;
+                    if (topPct > 40) alertas.push({ tipo: 'warn', icon: '🎯', texto: `<strong>Concentração elevada:</strong> A categoria <strong>${catArr[0][0]}</strong> representa <strong>${fmp(topPct)}</strong> das despesas. Considere diversificar ou renegociar.` });
+                }
+
+                // Concentração em fornecedores
+                const pesMap = aggregateBy(debitos, t => t.pessoa, t => t.valor);
+                const pesArr = [...pesMap.entries()].sort((a, b) => b[1] - a[1]);
+                if (pesArr.length && totDes > 0) {
+                    const topPct = (pesArr[0][1] / totDes) * 100;
+                    if (topPct > 30) alertas.push({ tipo: 'info', icon: '👤', texto: `<strong>Dependência de fornecedor:</strong> <strong>${pesArr[0][0]}</strong> concentra <strong>${fmp(topPct)}</strong> das despesas. Avalie riscos de dependência.` });
+                }
+
+                // Alerta de meses negativos
+                const mesesNeg = ks.filter(k => (mm.get(k).rec - mm.get(k).des) < 0).length;
+                if (mesesNeg > 0 && ks.length > 0) {
+                    const pct = (mesesNeg / ks.length) * 100;
+                    if (pct > 40) alertas.push({ tipo: 'danger', icon: '📅', texto: `<strong>Meses no vermelho:</strong> <strong>${mesesNeg} de ${ks.length}</strong> meses tiveram resultado negativo. Sinal de instabilidade financeira.` });
+                    else if (pct > 20) alertas.push({ tipo: 'warn', icon: '📅', texto: `<strong>${mesesNeg} mês(es) negativo(s)</strong> no período analisado. Fique atento à recorrência.` });
+                }
+
+                // Sem alertas
+                if (!alertas.length) alertas.push({ tipo: 'ok', icon: '🎉', texto: 'Nenhum alerta crítico identificado. A situação financeira está sob controle.' });
+
+                const alertCount = $('execAlertCount');
+                if (alertCount) alertCount.textContent = alertas.length;
+                const alertasEl = $('execAlertas');
+                if (alertasEl) {
+                    alertasEl.innerHTML = alertas.map(a => `
+                        <div class="exec-alert ${a.tipo}">
+                            <span class="alert-icon">${a.icon}</span>
+                            <span class="alert-text">${a.texto}</span>
+                        </div>
+                    `).join('');
+                }
+
+                // ===== INSIGHTS =====
+                const insights = [];
+                // Insight de tendência
+                if (ks.length >= 3) {
+                    const recArr = ks.map(k => mm.get(k).rec);
+                    const desArr = ks.map(k => mm.get(k).des);
+                    const rr = linearRegression(recArr.map((v, i) => [i, v]));
+                    const rd = linearRegression(desArr.map((v, i) => [i, v]));
+                    const tendRec = rr.b > 0 ? 'crescente' : 'decrescente';
+                    const tendDes = rd.b > 0 ? 'crescente' : 'decrescente';
+                    insights.push(`<strong>📈 Tendência:</strong> A receita apresenta tendência <strong>${tendRec}</strong> enquanto as despesas seguem tendência <strong>${tendDes}</strong>. ${rr.b > 0 && rd.b < 0 ? 'Cenário ideal: receita subindo e despesa caindo.' : rr.b < 0 && rd.b > 0 ? 'Cenário de atenção: receita caindo e despesa subindo.' : 'Monitore a evolução nos próximos meses.'}`);
+                }
+
+                // Insight sazonal
+                const szMap = Array(12).fill(0).map(() => ({ rec: 0, des: 0, count: 0 }));
+                for (const t of all) {
+                    const idx = t.mes - 1;
+                    if (t.tipo === 'credito') szMap[idx].rec += t.valor; else szMap[idx].des += t.valor;
+                    szMap[idx].count++;
+                }
+                const melhorMes = szMap.map((s, i) => ({ m: i, r: s.rec - s.des })).sort((a, b) => b.r - a.r)[0];
+                const piorMes = szMap.map((s, i) => ({ m: i, r: s.rec - s.des })).sort((a, b) => a.r - b.r)[0];
+                if (melhorMes && piorMes && melhorMes.m !== piorMes.m) {
+                    insights.push(`<strong>📅 Sazonalidade:</strong> Historicamente, <strong>${mesesNom[melhorMes.m]}</strong> é o melhor mês (saldo médio positivo) e <strong>${mesesNom[piorMes.m]}</strong> é o mais desafiador. Planeje com antecedência.`);
+                }
+
+                // Insight de dias da semana
+                const diasSem = Array(7).fill(0);
+                for (const t of debitos) diasSem[t.dateObj.getDay()] += t.valor;
+                const diasNomes = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+                const idxMaior = diasSem.indexOf(Math.max(...diasSem));
+                insights.push(`<strong>📆 Comportamento:</strong> As despesas se concentram principalmente na <strong>${diasNomes[idxMaior]}</strong>, com R$ ${fm(diasSem[idxMaior])} acumulados. ${idxMaior === 1 || idxMaior === 5 ? 'Reflexo típico de pagamentos de início/fim de semana.' : ''}`);
+
+                // Insight de forma de pagamento
+                const fpMap = aggregateBy(debitos, t => t.formaPagamento || 'Não informado', t => t.valor);
+                const fpArr = [...fpMap.entries()].sort((a, b) => b[1] - a[1]);
+                if (fpArr.length) {
+                    const pct = totDes > 0 ? (fpArr[0][1] / totDes) * 100 : 0;
+                    insights.push(`<strong>💳 Pagamentos:</strong> A forma mais utilizada é <strong>${fpArr[0][0]}</strong> (${fmp(pct)} das despesas). ${pct > 60 ? 'Alta dependência de uma única forma — avalie diversificar.' : 'Boa diversificação de formas de pagamento.'}`);
+                }
+
+                // Insight banco
+                const banMap = aggregateBy(debitos, t => t.banco, t => t.valor);
+                const banArr = [...banMap.entries()].sort((a, b) => b[1] - a[1]);
+                if (banArr.length > 1) {
+                    const pct = totDes > 0 ? (banArr[0][1] / totDes) * 100 : 0;
+                    insights.push(`<strong>🏦 Bancos:</strong> O banco <strong>${banArr[0][0]}</strong> concentra <strong>${fmp(pct)}</strong> das saídas. ${pct > 70 ? 'Considere distribuir melhor para reduzir riscos.' : 'Distribuição razoável entre instituições.'}`);
+                }
+
+                const insightsEl = $('execInsights');
+                if (insightsEl) {
+                    insightsEl.innerHTML = insights.map(i => `<div class="exec-insight">${i}</div>`).join('');
+                }
+
+                // ===== COMPARATIVO MÊS ATUAL VS ANTERIOR =====
+                const cmpEl = $('execComparativo');
+                if (cmpEl && ultimo && penultimo) {
+                    const mesU = `${mesesAbrev[ultimo.mes-1]}/${ultimo.ano}`;
+                    const mesP = `${mesesAbrev[penultimo.mes-1]}/${penultimo.ano}`;
+                    const resU = ultimo.rec - ultimo.des, resP = penultimo.rec - penultimo.des;
+                    const deltaR = ultimo.rec - penultimo.rec, deltaD = ultimo.des - penultimo.des, deltaRes = resU - resP;
+                    const fmtDelta = (v, invert) => {
+                        const up = v > 0;
+                        const good = invert ? !up : up;
+                        const cor = Math.abs(v) < 1 ? 'var(--text-secondary)' : (good ? 'var(--success)' : 'var(--danger)');
+                        const arrow = Math.abs(v) < 1 ? '→' : (up ? '▲' : '▼');
+                        return `<span style="color:${cor};font-weight:700">${arrow} R$ ${fm(Math.abs(v))}</span>`;
+                    };
+                    cmpEl.innerHTML = `
+                        <div class="exec-comparativo-row" style="background:var(--card-bg)">
+                            <span class="cmp-label">📅 Período</span>
+                            <span class="cmp-val" style="color:var(--text-secondary);font-size:0.72rem">${mesP}</span>
+                            <span class="cmp-val" style="color:var(--accent);font-size:0.72rem">${mesU}</span>
+                            <span class="cmp-val" style="color:var(--text-secondary);font-size:0.72rem">Δ</span>
+                        </div>
+                        <div class="exec-comparativo-row">
+                            <span class="cmp-label">💰 Receita</span>
+                            <span class="cmp-val" style="color:var(--success)">R$ ${fm(penultimo.rec)}</span>
+                            <span class="cmp-val" style="color:var(--success)">R$ ${fm(ultimo.rec)}</span>
+                            <span class="cmp-val">${fmtDelta(deltaR, false)}</span>
+                        </div>
+                        <div class="exec-comparativo-row">
+                            <span class="cmp-label">📤 Despesa</span>
+                            <span class="cmp-val" style="color:var(--danger)">R$ ${fm(penultimo.des)}</span>
+                            <span class="cmp-val" style="color:var(--danger)">R$ ${fm(ultimo.des)}</span>
+                            <span class="cmp-val">${fmtDelta(deltaD, true)}</span>
+                        </div>
+                        <div class="exec-comparativo-row">
+                            <span class="cmp-label">⚖️ Resultado</span>
+                            <span class="cmp-val" style="color:${resP >= 0 ? 'var(--success)' : 'var(--danger)'}">R$ ${fm(resP)}</span>
+                            <span class="cmp-val" style="color:${resU >= 0 ? 'var(--success)' : 'var(--danger)'}">R$ ${fm(resU)}</span>
+                            <span class="cmp-val">${fmtDelta(deltaRes, false)}</span>
+                        </div>
+                    `;
+                } else if (cmpEl) {
+                    cmpEl.innerHTML = '<div class="exec-insight">Dados insuficientes para comparativo entre meses.</div>';
+                }
+
+                // ===== GRÁFICO MENSAL =====
+                const labels12 = ks.slice(-12).map(k => { const [y, m] = k.split('-'); return `${mesesAbrev[+m-1]}/${y.slice(2)}`; });
+                const rec12 = ks.slice(-12).map(k => mm.get(k).rec);
+                const des12 = ks.slice(-12).map(k => mm.get(k).des);
+                const res12 = ks.slice(-12).map(k => mm.get(k).rec - mm.get(k).des);
+                const cG = ctx('execGraficoMensal');
+                if (cG) {
+                    charts['execGraficoMensal'] = new Chart(cG, {
+                        type: 'bar',
+                        data: {
+                            labels: labels12,
+                            datasets: [
+                                { label: 'Receitas', data: rec12, backgroundColor: '#10b981', borderRadius: 6 },
+                                { label: 'Despesas', data: des12, backgroundColor: '#ef4444', borderRadius: 6 },
+                                { label: 'Resultado', data: res12, type: 'line', borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.1)', fill: false, tension: 0.4, pointRadius: 4, borderWidth: 2.5, yAxisID: 'y' }
+                            ]
+                        },
+                        options: {
+                            responsive: true, maintainAspectRatio: false,
+                            plugins: { tooltip: { callbacks: { label: x => `${x.dataset.label}: R$ ${fm(x.raw)}` } } },
+                            scales: { y: { ticks: { callback: v => `R$ ${fm(v)}` } } }
+                        }
+                    });
+                }
+
+                // ===== PIZZA DESPESAS =====
+                doughnut('execGraficoPizza', catArr.slice(0, 7).map(e => e[0]), catArr.slice(0, 7).map(e => e[1]),
+                    ['#ef4444','#f59e0b','#10b981','#6366f1','#8b5cf6','#ec4899','#06b6d4']);
+
+                // ===== TOP CATEGORIAS =====
+                const topCatEl = $('execTopCat');
+                if (topCatEl) {
+                    topCatEl.innerHTML = catArr.slice(0, 8).map(([c, v], i) => {
+                        const pct = totDes > 0 ? (v / totDes) * 100 : 0;
+                        const colors = ['#ef4444','#f97316','#f59e0b','#10b981','#06b6d4','#6366f1','#8b5cf6','#ec4899'];
+                        return `<li>
+                            <span class="rank-badge" style="background:${colors[i]}">${i+1}</span>
+                            <div class="exec-bar-wrap">
+                                <div style="display:flex;justify-content:space-between;gap:8px;">
+                                    <span class="lbl">${c}</span>
+                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pct)})</span></span>
+                                </div>
+                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pct)}%;background:${colors[i]}"></div></div>
+                            </div>
+                        </li>`;
+                    }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
+                }
+
+                // ===== TOP PESSOAS =====
+                const topPesEl = $('execTopPes');
+                if (topPesEl) {
+                    topPesEl.innerHTML = pesArr.slice(0, 8).map(([p, v], i) => {
+                        const pct = totDes > 0 ? (v / totDes) * 100 : 0;
+                        return `<li>
+                            <span class="rank-badge" style="background:${i < 3 ? '#ef4444' : '#94a3b8'}">${i+1}</span>
+                            <div class="exec-bar-wrap">
+                                <div style="display:flex;justify-content:space-between;gap:8px;">
+                                    <span class="lbl">${p}</span>
+                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pct)})</span></span>
+                                </div>
+                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pct)}%;background:${i < 3 ? '#ef4444' : '#94a3b8'}"></div></div>
+                            </div>
+                        </li>`;
+                    }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
+                }
+
+                // ===== TOP BANCOS =====
+                const topBanEl = $('execTopBan');
+                if (topBanEl) {
+                    const totalBan = banArr.reduce((a, b) => a + b[1], 0);
+                    topBanEl.innerHTML = banArr.slice(0, 6).map(([b, v], i) => {
+                        const pct = totalBan > 0 ? (v / totalBan) * 100 : 0;
+                        return `<li>
+                            <span class="rank-badge" style="background:${i < 3 ? '#6366f1' : '#94a3b8'}">${i+1}</span>
+                            <div class="exec-bar-wrap">
+                                <div style="display:flex;justify-content:space-between;gap:8px;">
+                                    <span class="lbl">${b}</span>
+                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pct)})</span></span>
+                                </div>
+                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pct)}%;background:${i < 3 ? '#6366f1' : '#94a3b8'}"></div></div>
+                            </div>
+                        </li>`;
+                    }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
+                }
+
+                // ===== MELHORES E PIORES MESES =====
+                const ordemMeses = ks.map(k => ({ k, saldo: mm.get(k).rec - mm.get(k).des, rec: mm.get(k).rec, des: mm.get(k).des, ano: mm.get(k).ano, mes: mm.get(k).mes }));
+                const melhores = [...ordemMeses].sort((a, b) => b.saldo - a.saldo).slice(0, 5);
+                const piores = [...ordemMeses].sort((a, b) => a.saldo - b.saldo).slice(0, 5);
+                const melhoresEl = $('execMelhores');
+                if (melhoresEl) {
+                    melhoresEl.innerHTML = melhores.map((m, i) => `
+                        <li>
+                            <span class="rank-badge" style="background:#10b981">${i+1}</span>
+                            <span class="lbl">${mesesAbrev[m.mes-1]}/${m.ano}</span>
+                            <span class="val" style="color:var(--success)">R$ ${fm(m.saldo)}</span>
+                        </li>
+                    `).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
+                }
+                const pioresEl = $('execPiores');
+                if (pioresEl) {
+                    pioresEl.innerHTML = piores.map((m, i) => `
+                        <li>
+                            <span class="rank-badge" style="background:#ef4444">${i+1}</span>
+                            <span class="lbl">${mesesAbrev[m.mes-1]}/${m.ano}</span>
+                            <span class="val" style="color:var(--danger)">R$ ${fm(m.saldo)}</span>
+                        </li>
+                    `).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
+                }
+
+                // ===== TABELA ÚLTIMOS 12 MESES =====
                 const tbody = document.querySelector('#execTabela tbody');
                 if (tbody) {
                     tbody.innerHTML = ''; const frag = document.createDocumentFragment();
-                    for (const k of ks) {
-                        const d = mm.get(k); const s = d.rec - d.des; const m = d.rec > 0 ? (s/d.rec)*100 : 0;
+                    const ult12 = ks.slice(-12);
+                    ult12.forEach((k, idx) => {
+                        const d = mm.get(k); const s = d.rec - d.des; const m = d.rec > 0 ? (s / d.rec) * 100 : 0;
+                        let tendHtml = '—';
+                        if (idx > 0) {
+                            const ant = mm.get(ult12[idx - 1]);
+                            const sAnt = ant.rec - ant.des;
+                            const delta = s - sAnt;
+                            const up = delta > 0;
+                            tendHtml = `<span style="color:${up ? 'var(--success)' : 'var(--danger)'};font-weight:700">${up ? '▲' : '▼'} R$ ${fm(Math.abs(delta))}</span>`;
+                        }
                         const tr = document.createElement('tr');
-                        tr.innerHTML = `<td>${mesesAbrev[d.mes-1]}/${d.ano}</td><td style="color:var(--success)">R$ ${fm(d.rec)}</td><td style="color:var(--danger)">R$ ${fm(d.des)}</td><td style="color:${s>=0?'var(--success)':'var(--danger)'};font-weight:600">R$ ${fm(s)}</td><td>${d.rec>0?fmp(m):'N/A'}</td>`;
+                        tr.innerHTML = `<td><strong>${mesesAbrev[d.mes-1]}/${d.ano}</strong></td><td style="color:var(--success)">R$ ${fm(d.rec)}</td><td style="color:var(--danger)">R$ ${fm(d.des)}</td><td style="color:${s >= 0 ? 'var(--success)' : 'var(--danger)'};font-weight:700">R$ ${fm(s)}</td><td>${d.rec > 0 ? fmp(m) : 'N/A'}</td><td>${tendHtml}</td>`;
                         frag.appendChild(tr);
-                    }
+                    });
                     tbody.appendChild(frag);
                 }
+            }
+
+            // Função auxiliar para o score (usada no executivo)
+            function calcularScore() {
+                const totRec = sumBy(creditos, () => true), totDes = sumBy(debitos, () => true);
+                const margem = totRec > 0 ? (totRec - totDes) / totRec : 0;
+                const ptMargem = Math.max(0, Math.min(25, margem * 100 / 2));
+                const ptPoup = Math.max(0, Math.min(25, margem * 100 / 2));
+                const pend = [...debitos, ...creditos].filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s === 'false'; });
+                const totPend = sumBy(pend, () => true);
+                const inadim = (totRec + totDes) > 0 ? totPend / (totRec + totDes) : 0;
+                const ptInad = Math.max(0, Math.min(25, (1 - inadim * 10) * 25));
+                const mm = new Map();
+                for (const t of [...creditos, ...debitos]) {
+                    const k = `${t.ano}-${t.mes}`;
+                    if (!mm.has(k)) mm.set(k, { e: 0, s: 0 });
+                    const x = mm.get(k); if (t.tipo === 'credito') x.e += t.valor; else x.s += t.valor;
+                }
+                const meses = [...mm.values()];
+                const positivos = meses.filter(m => m.e - m.s > 0).length;
+                const ptCons = meses.length ? (positivos / meses.length) * 25 : 0;
+                return Math.round(ptMargem + ptPoup + ptInad + ptCons);
             }
 
             /* ===== EVENTOS E INICIALIZAÇÃO ===== */
@@ -1921,8 +2084,6 @@
                 const limparAm = $('limparFiltrosAnaliseMensal');
                 if (limparAm) limparAm.onclick = () => { if (amAno) amAno.value = ''; updateAnaliseMensal(); };
 
-                initMetasEvents();
-
                 const matrizAno = $('matrizAno'); if (matrizAno) matrizAno.onchange = updateMatriz;
                 const matrizTipo = $('matrizTipo'); if (matrizTipo) matrizTipo.onchange = updateMatriz;
             }
@@ -1954,14 +2115,10 @@
                         setTimeout(() => Object.values(charts).forEach(ch => ch && ch.resize && ch.resize()), 150);
                         const p = btn.dataset.page;
                         if (p === 'analisemensal') updateAnaliseMensal();
-                        if (p === 'fluxocaixa') updateFluxoCaixa();
-                        if (p === 'metas') updateMetas();
-                        if (p === 'recorrencias') updateRecorrencias();
                         if (p === 'topgastos') updateTopGastos();
                         if (p === 'diasemana') updateDiaSemana();
                         if (p === 'centroscusto') updateCentrosCusto();
                         if (p === 'score') updateScore();
-                        if (p === 'simulador') initSimulador();
                         if (p === 'matriz') updateMatriz();
                         if (p === 'executivo') updateExecutivo();
                     }
@@ -2003,16 +2160,10 @@
                     updateDebCalendar();
                     updateCredCalendar();
                     updateAnaliseMensal();
-                    // Novas páginas
-                    updateFluxoCaixa();
-                    updateMetas();
-                    updateRecorrencias();
                     updateTopGastos();
                     updateDiaSemana();
                     updateCentrosCusto();
                     updateScore();
-                    simLoaded = false;
-                    initSimulador();
                     updateMatriz();
                     updateExecutivo();
                     toast('✅ Dados carregados!', 'success');
