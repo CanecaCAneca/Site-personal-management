@@ -101,6 +101,25 @@
             background: var(--card-solid); color: var(--text); transition: all 0.2s; text-decoration: none;
         }
         .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); color: var(--accent); }
+        /* ===== BOTÃO WHATSAPP (ADMIN) ===== */
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #fff !important; border-color: transparent;
+        }
+        .btn-whatsapp:hover {
+            color: #fff !important; border-color: transparent;
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+            transform: translateY(-2px);
+        }
+        .btn-whatsapp .wa-dot {
+            width: 8px; height: 8px; background: #fff; border-radius: 50%;
+            display: inline-block; box-shadow: 0 0 0 3px rgba(255,255,255,0.35);
+            animation: waPulse 1.8s infinite;
+        }
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 0 0 3px rgba(255,255,255,0.35); }
+            50% { box-shadow: 0 0 0 6px rgba(255,255,255,0.15); }
+        }
         .page { display: none; flex-direction: column; gap: 20px; animation: fadeIn 0.3s ease; }
         .page.active { display: flex; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
@@ -394,8 +413,13 @@
                     <div class="clock"><span class="clock-time" id="clockTime">--:--</span><span class="clock-date" id="clockDate">---</span></div>
                     <h1>📊 Gestão Financeira Premium</h1>
                 </div>
-                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
                     <button class="btn" id="refreshDataBtn">⟳ Atualizar</button>
+                    <a href="https://wa.me/5545998542440?text=Ol%C3%A1%20Daniel!%20Preciso%20de%20ajuda%20com%20o%20painel%20financeiro."
+                       target="_blank" rel="noopener" class="btn btn-whatsapp"
+                       title="Falar com Daniel (Admin) - WhatsApp 45 99854-2440">
+                        <span class="wa-dot"></span> 💬 Daniel (Admin) • 45 99854-2440
+                    </a>
                     <button class="btn" id="darkModeToggle">🌙</button>
                     <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSWlUNgP29Erp8Rh5AZPg430wul7T9IwPBPgozPQpO2ig9g8gpJoTn4JNfcKAbBSNH59VngkPE4A7dF/pub" target="_blank" class="btn" rel="noopener">📊 Planilha</a>
                     <button class="btn" id="printBtn">🖨️</button>
@@ -641,9 +665,7 @@
                 </div>
             </div>
 
-            <!-- ============================================================ -->
-            <!-- ============ TOP GASTOS ==================================== -->
-            <!-- ============================================================ -->
+            <!-- Top Gastos -->
             <div id="topgastos" class="page">
                 <div class="cards-row">
                     <div class="card card-saida"><div class="card-title">🔝 Maior Débito</div><div class="card-value saida" id="topMaiorDeb" style="font-size:1.1rem;">-</div></div>
@@ -671,9 +693,7 @@
                 </div>
             </div>
 
-            <!-- ============================================================ -->
-            <!-- ============ DIA DA SEMANA ================================= -->
-            <!-- ============================================================ -->
+            <!-- Dia da Semana -->
             <div id="diasemana" class="page">
                 <div class="cards-row">
                     <div class="card card-entrada"><div class="card-title">💰 Total Entradas</div><div class="card-value entrada" id="dsTotalEnt">R$ 0,00</div></div>
@@ -690,9 +710,7 @@
                 </div>
             </div>
 
-            <!-- ============================================================ -->
-            <!-- ============ CENTROS DE CUSTO ============================== -->
-            <!-- ============================================================ -->
+            <!-- Centros de Custo -->
             <div id="centroscusto" class="page">
                 <div class="cards-row">
                     <div class="card card-saida"><div class="card-title">💸 Total Despesas</div><div class="card-value saida" id="ccTotalDes">R$ 0,00</div></div>
@@ -708,9 +726,7 @@
                 </div>
             </div>
 
-            <!-- ============================================================ -->
-            <!-- ============ SCORE FINANCEIRO ============================== -->
-            <!-- ============================================================ -->
+            <!-- Score Financeiro -->
             <div id="score" class="page">
                 <div class="cards-row">
                     <div class="card" style="flex:1 1 300px;">
@@ -728,9 +744,7 @@
                 <div class="chart-box"><h3>📊 Comparativo dos Indicadores (0-25)</h3><canvas id="scoreGrafico"></canvas></div>
             </div>
 
-            <!-- ============================================================ -->
-            <!-- ============ MATRIZ CAT × MÊS ============================== -->
-            <!-- ============================================================ -->
+            <!-- Matriz Cat × Mês -->
             <div id="matriz" class="page">
                 <div class="filter-bar">
                     <div class="filter-group"><label>Ano</label><select id="matrizAno"><option value="">Todos</option></select></div>
@@ -745,11 +759,8 @@
                 </div>
             </div>
 
-            <!-- ============================================================ -->
-            <!-- ============ RELATÓRIO EXECUTIVO MELHORADO ================= -->
-            <!-- ============================================================ -->
+            <!-- Relatório Executivo -->
             <div id="executivo" class="page">
-                <!-- HERO -->
                 <div class="exec-hero">
                     <h2>📑 Relatório Executivo</h2>
                     <p>Análise consolidada da saúde financeira, tendências e insights estratégicos.</p>
@@ -757,40 +768,33 @@
                     <span class="exec-status-badge" id="execStatusBadge">ANALISANDO...</span>
                 </div>
 
-                <!-- KPIs PRINCIPAIS -->
                 <div class="exec-grid" id="execKpisGrid"></div>
 
-                <!-- ALERTAS E RECOMENDAÇÕES -->
                 <div class="exec-section">
                     <h3>🚨 Alertas & Recomendações <span class="h3-badge" id="execAlertCount">0</span></h3>
                     <div id="execAlertas"></div>
                 </div>
 
-                <!-- DIAGNÓSTICO / INSIGHTS -->
                 <div class="exec-section">
                     <h3>💡 Insights Estratégicos</h3>
                     <div id="execInsights"></div>
                 </div>
 
-                <!-- COMPARATIVO MÊS ATUAL VS ANTERIOR -->
                 <div class="exec-section">
                     <h3>📊 Comparativo Mês Atual vs Anterior</h3>
                     <div id="execComparativo"></div>
                 </div>
 
-                <!-- GRÁFICOS -->
                 <div class="charts-row">
                     <div class="chart-box"><h3>📈 Receitas, Despesas e Resultado (12 Meses)</h3><canvas id="execGraficoMensal"></canvas></div>
                     <div class="chart-box"><h3>🥧 Composição das Despesas</h3><canvas id="execGraficoPizza"></canvas></div>
                 </div>
 
-                <!-- TOP CATEGORIAS -->
                 <div class="exec-section">
                     <h3>🏆 Top 8 Categorias de Despesa</h3>
                     <ul class="exec-list" id="execTopCat"></ul>
                 </div>
 
-                <!-- TOP PESSOAS + BANCOS -->
                 <div class="charts-row">
                     <div class="exec-section" style="flex:1 1 380px;">
                         <h3>👥 Top 8 Pessoas / Fornecedores</h3>
@@ -802,7 +806,6 @@
                     </div>
                 </div>
 
-                <!-- MELHORES E PIORES MESES -->
                 <div class="charts-row">
                     <div class="exec-section" style="flex:1 1 380px;">
                         <h3>🏅 Top 5 Melhores Meses</h3>
@@ -814,7 +817,6 @@
                     </div>
                 </div>
 
-                <!-- TABELA ÚLTIMOS 12 MESES -->
                 <div class="exec-section">
                     <h3>📅 Últimos 12 Meses</h3>
                     <div class="table-container" style="max-height:none;">
@@ -1120,7 +1122,6 @@
                 populateFilterSelects();
             }
 
-            /* ===== ATUALIZADORES ORIGINAIS ===== */
             function updateResumo() {
                 const f = filterData([...debitos, ...creditos], 'res');
                 const ent = sumBy(f, t => t.tipo === 'credito'), sai = sumBy(f, t => t.tipo === 'debito');
@@ -1646,13 +1647,11 @@
                 const res = totRec - totDes;
                 const mg = totRec > 0 ? (res / totRec) * 100 : 0;
 
-                // Data de geração
                 const agora = new Date();
                 if ($('execData')) {
                     $('execData').textContent = `Gerado em ${agora.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })} às ${agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
                 }
 
-                // Status badge
                 const score = calcularScore();
                 const statusBadge = $('execStatusBadge');
                 if (statusBadge) {
@@ -1660,7 +1659,6 @@
                     statusBadge.textContent = `STATUS: ${statusLabel} • SCORE ${score}/100`;
                 }
 
-                // Mapa mensal
                 const mm = new Map();
                 for (const t of all) {
                     const k = `${t.ano}-${String(t.mes).padStart(2,'0')}`;
@@ -1671,13 +1669,11 @@
                 }
                 const ks = [...mm.keys()].sort(compareMonthKeys);
 
-                // Últimos 3 meses para comparação
                 const ultimoK = ks[ks.length - 1];
                 const penultimoK = ks[ks.length - 2];
                 const ultimo = ultimoK ? mm.get(ultimoK) : null;
                 const penultimo = penultimoK ? mm.get(penultimoK) : null;
 
-                // ===== KPIs PRINCIPAIS =====
                 const mesesAtivos = ks.length;
                 const mediaRec = mesesAtivos ? totRec / mesesAtivos : 0;
                 const mediaDes = mesesAtivos ? totDes / mesesAtivos : 0;
@@ -1685,7 +1681,6 @@
                 const pend = all.filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s === 'false'; });
                 const totPend = sumBy(pend, () => true);
 
-                // Variação mês atual vs anterior
                 let varRec = 0, varDes = 0, varRes = 0;
                 if (ultimo && penultimo) {
                     varRec = penultimo.rec > 0 ? ((ultimo.rec - penultimo.rec) / penultimo.rec) * 100 : 0;
@@ -1722,25 +1717,19 @@
                     }).join('');
                 }
 
-                // ===== ALERTAS =====
                 const alertas = [];
-                // Alerta de margem
                 if (mg < 0) alertas.push({ tipo: 'danger', icon: '🚨', texto: `<strong>Operação deficitária:</strong> A margem está negativa em <strong>${fmp(mg)}</strong>. As despesas superam as receitas em <strong>R$ ${fm(Math.abs(res))}</strong>. Recomenda-se revisar urgentemente os gastos.` });
                 else if (mg < 10) alertas.push({ tipo: 'warn', icon: '⚠️', texto: `<strong>Margem apertada:</strong> A margem de <strong>${fmp(mg)}</strong> está abaixo do ideal (mínimo recomendado: 20%). Há pouco espaço para imprevistos.` });
                 else if (mg >= 20) alertas.push({ tipo: 'ok', icon: '✅', texto: `<strong>Margem saudável:</strong> A margem de <strong>${fmp(mg)}</strong> indica boa eficiência operacional. Continue monitorando.` });
 
-                // Alerta de inadimplência
                 const inadimPct = (totRec + totDes) > 0 ? (totPend / (totRec + totDes)) * 100 : 0;
                 if (inadimPct > 10) alertas.push({ tipo: 'danger', icon: '💸', texto: `<strong>Inadimplência alta:</strong> <strong>R$ ${fm(totPend)}</strong> (${fmp(inadimPct)} do volume) estão pendentes em <strong>${pend.length} transações</strong>. Priorize a cobrança.` });
                 else if (inadimPct > 5) alertas.push({ tipo: 'warn', icon: '⏳', texto: `<strong>Atenção à inadimplência:</strong> <strong>R$ ${fm(totPend)}</strong> em ${pend.length} transações pendentes. Monitore de perto.` });
 
-                // Alerta de crescimento de despesa
                 if (ultimo && penultimo && varDes > 15) alertas.push({ tipo: 'warn', icon: '📈', texto: `<strong>Despesas em alta:</strong> As despesas cresceram <strong>${fmp(varDes)}</strong> no último mês. Revise os principais aumentos.` });
 
-                // Alerta de queda de receita
                 if (ultimo && penultimo && varRec < -10) alertas.push({ tipo: 'danger', icon: '📉', texto: `<strong>Queda de receita:</strong> A receita caiu <strong>${fmp(Math.abs(varRec))}</strong> no último mês. Investigue as causas.` });
 
-                // Concentração em categorias
                 const catMap = aggregateBy(debitos, t => t.categoria, t => t.valor);
                 const catArr = [...catMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (catArr.length && totDes > 0) {
@@ -1748,7 +1737,6 @@
                     if (topPct > 40) alertas.push({ tipo: 'warn', icon: '🎯', texto: `<strong>Concentração elevada:</strong> A categoria <strong>${catArr[0][0]}</strong> representa <strong>${fmp(topPct)}</strong> das despesas. Considere diversificar ou renegociar.` });
                 }
 
-                // Concentração em fornecedores
                 const pesMap = aggregateBy(debitos, t => t.pessoa, t => t.valor);
                 const pesArr = [...pesMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (pesArr.length && totDes > 0) {
@@ -1756,7 +1744,6 @@
                     if (topPct > 30) alertas.push({ tipo: 'info', icon: '👤', texto: `<strong>Dependência de fornecedor:</strong> <strong>${pesArr[0][0]}</strong> concentra <strong>${fmp(topPct)}</strong> das despesas. Avalie riscos de dependência.` });
                 }
 
-                // Alerta de meses negativos
                 const mesesNeg = ks.filter(k => (mm.get(k).rec - mm.get(k).des) < 0).length;
                 if (mesesNeg > 0 && ks.length > 0) {
                     const pct = (mesesNeg / ks.length) * 100;
@@ -1764,7 +1751,6 @@
                     else if (pct > 20) alertas.push({ tipo: 'warn', icon: '📅', texto: `<strong>${mesesNeg} mês(es) negativo(s)</strong> no período analisado. Fique atento à recorrência.` });
                 }
 
-                // Sem alertas
                 if (!alertas.length) alertas.push({ tipo: 'ok', icon: '🎉', texto: 'Nenhum alerta crítico identificado. A situação financeira está sob controle.' });
 
                 const alertCount = $('execAlertCount');
@@ -1779,9 +1765,7 @@
                     `).join('');
                 }
 
-                // ===== INSIGHTS =====
                 const insights = [];
-                // Insight de tendência
                 if (ks.length >= 3) {
                     const recArr = ks.map(k => mm.get(k).rec);
                     const desArr = ks.map(k => mm.get(k).des);
@@ -1792,7 +1776,6 @@
                     insights.push(`<strong>📈 Tendência:</strong> A receita apresenta tendência <strong>${tendRec}</strong> enquanto as despesas seguem tendência <strong>${tendDes}</strong>. ${rr.b > 0 && rd.b < 0 ? 'Cenário ideal: receita subindo e despesa caindo.' : rr.b < 0 && rd.b > 0 ? 'Cenário de atenção: receita caindo e despesa subindo.' : 'Monitore a evolução nos próximos meses.'}`);
                 }
 
-                // Insight sazonal
                 const szMap = Array(12).fill(0).map(() => ({ rec: 0, des: 0, count: 0 }));
                 for (const t of all) {
                     const idx = t.mes - 1;
@@ -1805,14 +1788,12 @@
                     insights.push(`<strong>📅 Sazonalidade:</strong> Historicamente, <strong>${mesesNom[melhorMes.m]}</strong> é o melhor mês (saldo médio positivo) e <strong>${mesesNom[piorMes.m]}</strong> é o mais desafiador. Planeje com antecedência.`);
                 }
 
-                // Insight de dias da semana
                 const diasSem = Array(7).fill(0);
                 for (const t of debitos) diasSem[t.dateObj.getDay()] += t.valor;
                 const diasNomes = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
                 const idxMaior = diasSem.indexOf(Math.max(...diasSem));
                 insights.push(`<strong>📆 Comportamento:</strong> As despesas se concentram principalmente na <strong>${diasNomes[idxMaior]}</strong>, com R$ ${fm(diasSem[idxMaior])} acumulados. ${idxMaior === 1 || idxMaior === 5 ? 'Reflexo típico de pagamentos de início/fim de semana.' : ''}`);
 
-                // Insight de forma de pagamento
                 const fpMap = aggregateBy(debitos, t => t.formaPagamento || 'Não informado', t => t.valor);
                 const fpArr = [...fpMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (fpArr.length) {
@@ -1820,7 +1801,6 @@
                     insights.push(`<strong>💳 Pagamentos:</strong> A forma mais utilizada é <strong>${fpArr[0][0]}</strong> (${fmp(pct)} das despesas). ${pct > 60 ? 'Alta dependência de uma única forma — avalie diversificar.' : 'Boa diversificação de formas de pagamento.'}`);
                 }
 
-                // Insight banco
                 const banMap = aggregateBy(debitos, t => t.banco, t => t.valor);
                 const banArr = [...banMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (banArr.length > 1) {
@@ -1833,7 +1813,6 @@
                     insightsEl.innerHTML = insights.map(i => `<div class="exec-insight">${i}</div>`).join('');
                 }
 
-                // ===== COMPARATIVO MÊS ATUAL VS ANTERIOR =====
                 const cmpEl = $('execComparativo');
                 if (cmpEl && ultimo && penultimo) {
                     const mesU = `${mesesAbrev[ultimo.mes-1]}/${ultimo.ano}`;
@@ -1877,7 +1856,6 @@
                     cmpEl.innerHTML = '<div class="exec-insight">Dados insuficientes para comparativo entre meses.</div>';
                 }
 
-                // ===== GRÁFICO MENSAL =====
                 const labels12 = ks.slice(-12).map(k => { const [y, m] = k.split('-'); return `${mesesAbrev[+m-1]}/${y.slice(2)}`; });
                 const rec12 = ks.slice(-12).map(k => mm.get(k).rec);
                 const des12 = ks.slice(-12).map(k => mm.get(k).des);
@@ -1902,11 +1880,9 @@
                     });
                 }
 
-                // ===== PIZZA DESPESAS =====
                 doughnut('execGraficoPizza', catArr.slice(0, 7).map(e => e[0]), catArr.slice(0, 7).map(e => e[1]),
                     ['#ef4444','#f59e0b','#10b981','#6366f1','#8b5cf6','#ec4899','#06b6d4']);
 
-                // ===== TOP CATEGORIAS =====
                 const topCatEl = $('execTopCat');
                 if (topCatEl) {
                     topCatEl.innerHTML = catArr.slice(0, 8).map(([c, v], i) => {
@@ -1925,7 +1901,6 @@
                     }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
 
-                // ===== TOP PESSOAS =====
                 const topPesEl = $('execTopPes');
                 if (topPesEl) {
                     topPesEl.innerHTML = pesArr.slice(0, 8).map(([p, v], i) => {
@@ -1943,7 +1918,6 @@
                     }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
 
-                // ===== TOP BANCOS =====
                 const topBanEl = $('execTopBan');
                 if (topBanEl) {
                     const totalBan = banArr.reduce((a, b) => a + b[1], 0);
@@ -1962,7 +1936,6 @@
                     }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
 
-                // ===== MELHORES E PIORES MESES =====
                 const ordemMeses = ks.map(k => ({ k, saldo: mm.get(k).rec - mm.get(k).des, rec: mm.get(k).rec, des: mm.get(k).des, ano: mm.get(k).ano, mes: mm.get(k).mes }));
                 const melhores = [...ordemMeses].sort((a, b) => b.saldo - a.saldo).slice(0, 5);
                 const piores = [...ordemMeses].sort((a, b) => a.saldo - b.saldo).slice(0, 5);
@@ -1987,7 +1960,6 @@
                     `).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
 
-                // ===== TABELA ÚLTIMOS 12 MESES =====
                 const tbody = document.querySelector('#execTabela tbody');
                 if (tbody) {
                     tbody.innerHTML = ''; const frag = document.createDocumentFragment();
@@ -2010,7 +1982,6 @@
                 }
             }
 
-            // Função auxiliar para o score (usada no executivo)
             function calcularScore() {
                 const totRec = sumBy(creditos, () => true), totDes = sumBy(debitos, () => true);
                 const margem = totRec > 0 ? (totRec - totDes) / totRec : 0;
@@ -2032,7 +2003,6 @@
                 return Math.round(ptMargem + ptPoup + ptInad + ptCons);
             }
 
-            /* ===== EVENTOS E INICIALIZAÇÃO ===== */
             function bindEvents(pref, fn) {
                 ['Categoria','Pessoa','Status','FormaPagamento','Banco','Ano','Mes','Dia','Tipo'].forEach(s => {
                     const el = $(pref + s);
@@ -2088,7 +2058,6 @@
                 const matrizTipo = $('matrizTipo'); if (matrizTipo) matrizTipo.onchange = updateMatriz;
             }
 
-            /* ===== RELÓGIO ===== */
             function atualizarRelogio() {
                 const agora = new Date();
                 const hora = agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
