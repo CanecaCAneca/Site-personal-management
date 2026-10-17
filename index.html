@@ -15,74 +15,18 @@
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
             --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.03);
             --radius: 20px; --sidebar-width: 260px; --sidebar-collapsed-width: 72px;
-            --bg-image: radial-gradient(ellipse at 50% 0%, var(--accent-light) 0%, transparent 70%);
         }
-        /* ===== TEMAS DE FUNDO ===== */
-        body[data-theme="amarelo-preto"] {
-            --bg: #0a0a0a; --card-bg: rgba(30, 25, 0, 0.85); --card-solid: #1a1600;
-            --text: #ffd700; --text-secondary: #d4af37; --border: rgba(255, 215, 0, 0.25);
-            --accent: #ffd700; --accent-light: #ffed4e; --success: #ffd700; --danger: #ff8c00;
-            --warning: #ffed4e; --purple: #e6b800;
-            --shadow: 0 4px 6px rgba(255, 215, 0, 0.08), 0 2px 4px rgba(0,0,0,0.4);
-            --shadow-lg: 0 10px 30px rgba(255, 215, 0, 0.15), 0 4px 8px rgba(0,0,0,0.5);
-            --bg-image: radial-gradient(ellipse at 50% 0%, rgba(255,215,0,0.18) 0%, transparent 70%);
+        body.dark {
+            --bg: #0f172a; --card-bg: rgba(30, 41, 59, 0.8); --card-solid: #1e293b;
+            --text: #f1f5f9; --text-secondary: #94a3b8; --border: rgba(51, 65, 85, 0.8);
+            --accent: #818cf8; --success: #34d399; --danger: #f87171; --warning: #fbbf24;
         }
-        body[data-theme="amarelo-preto"] .sidebar { background: rgba(20, 16, 0, 0.85) !important; }
-        body[data-theme="amarelo-preto"] .btn { background: #1a1600; color: #ffd700; }
-        body[data-theme="amarelo-preto"] th { background: rgba(30,25,0,0.95) !important; }
-        body[data-theme="amarelo-preto"] .clock { background: #1a1600; }
-        body[data-theme="amarelo-preto"] h1 { background: linear-gradient(135deg,#ffd700,#ffed4e); -webkit-background-clip: text; background-clip: text; }
-        body[data-theme="amarelo-preto"] .kpi-trend.up { color:#ffd700; background:rgba(255,215,0,0.15); }
-        body[data-theme="amarelo-preto"] .kpi-trend.down { color:#ff8c00; background:rgba(255,140,0,0.15); }
-        body[data-theme="amarelo-preto"] .exec-kpi-card .kpi-value.entrada, 
-        body[data-theme="amarelo-preto"] .entrada { color: #ffd700 !important; }
-
-        body[data-theme="preto"] {
-            --bg: #000000; --card-bg: rgba(22, 22, 22, 0.9); --card-solid: #121212;
-            --text: #e5e5e5; --text-secondary: #9ca3af; --border: rgba(75, 75, 75, 0.8);
-            --accent: #00d4ff; --accent-light: #4fc3f7; --success: #22c55e; --danger: #ef4444;
-            --warning: #f59e0b; --purple: #a855f7;
-            --shadow: 0 4px 6px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.4);
-            --shadow-lg: 0 10px 30px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.5);
-            --bg-image: radial-gradient(ellipse at 50% 0%, rgba(0,212,255,0.10) 0%, transparent 70%);
-        }
-        body[data-theme="preto"] .sidebar { background: rgba(10,10,10,0.92) !important; }
-        body[data-theme="preto"] .btn { background: #121212; }
-        body[data-theme="preto"] th { background: rgba(20,20,20,0.95) !important; }
-        body[data-theme="preto"] .clock { background: #121212; }
-
-        body[data-theme="branco"] {
-            --bg: #ffffff; --card-bg: rgba(250, 250, 250, 0.92); --card-solid: #ffffff;
-            --text: #111827; --text-secondary: #6b7280; --border: rgba(210, 210, 210, 0.9);
-            --accent: #2563eb; --accent-light: #60a5fa; --success: #16a34a; --danger: #dc2626;
-            --warning: #d97706; --purple: #7c3aed;
-            --shadow: 0 2px 4px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-lg: 0 10px 30px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
-            --bg-image: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.06) 0%, transparent 70%);
-        }
-        body[data-theme="branco"] .sidebar { background: rgba(245,245,245,0.9) !important; }
-        body[data-theme="branco"] .btn { background: #ffffff; }
-        body[data-theme="branco"] th { background: rgba(240,240,240,0.95) !important; }
-
-        body[data-theme="azul-escuro"] {
-            --bg: #0a1929; --card-bg: rgba(15, 35, 55, 0.88); --card-solid: #142438;
-            --text: #e3f2fd; --text-secondary: #90caf9; --border: rgba(40, 80, 120, 0.85);
-            --accent: #4fc3f7; --accent-light: #81d4fa; --success: #26c6da; --danger: #ef5350;
-            --warning: #ffb74d; --purple: #9575cd;
-            --shadow: 0 4px 6px rgba(0,20,50,0.5), 0 2px 4px rgba(0,20,50,0.3);
-            --shadow-lg: 0 10px 30px rgba(0,20,50,0.6), 0 4px 8px rgba(0,20,50,0.4);
-            --bg-image: radial-gradient(ellipse at 50% 0%, rgba(79,195,247,0.15) 0%, transparent 70%);
-        }
-        body[data-theme="azul-escuro"] .sidebar { background: rgba(10,25,41,0.92) !important; }
-        body[data-theme="azul-escuro"] .btn { background: #142438; }
-        body[data-theme="azul-escuro"] th { background: rgba(20,36,56,0.95) !important; }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', system-ui, sans-serif; background: var(--bg);
-            background-image: var(--bg-image);
+            background-image: radial-gradient(ellipse at 50% 0%, var(--accent-light) 0%, transparent 70%);
             background-size: 100% 400px; background-repeat: no-repeat; display: flex;
-            min-height: 100vh; color: var(--text); transition: background 0.3s, color 0.3s;
+            min-height: 100vh; color: var(--text); transition: background 0.2s, color 0.2s;
         }
         .sidebar {
             width: var(--sidebar-width); background: rgba(255, 255, 255, 0.65);
@@ -93,6 +37,7 @@
             transition: width 0.3s ease, padding 0.3s ease;
         }
         .sidebar.collapsed { width: var(--sidebar-collapsed-width); padding: 24px 8px; }
+        body.dark .sidebar { background: rgba(15, 23, 42, 0.75); }
         .sidebar-header { display: flex; align-items: center; justify-content: space-between; padding: 0 8px 18px; white-space: nowrap; }
         .sidebar-header h2 { font-size: 1.1rem; font-weight: 700; color: var(--text); transition: opacity 0.2s, width 0.2s; overflow: hidden; }
         .sidebar.collapsed .sidebar-header h2 { opacity: 0; width: 0; margin: 0; }
@@ -156,25 +101,15 @@
             background: var(--card-solid); color: var(--text); transition: all 0.2s; text-decoration: none;
         }
         .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); color: var(--accent); }
-        /* Theme selector */
-        .theme-selector {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--card-solid); border: 1px solid var(--border);
-            border-radius: 30px; padding: 6px 14px 6px 12px; box-shadow: var(--shadow-sm);
-            font-size: 0.78rem; font-weight: 600;
-        }
-        .theme-selector select {
-            background: transparent; border: none; font-family: inherit; font-weight: 600;
-            color: var(--text); font-size: 0.78rem; cursor: pointer; padding: 2px 4px; outline: none;
-        }
-        .theme-selector select option { background: var(--card-solid); color: var(--text); }
+        /* ===== BOTÃO WHATSAPP (ADMIN) ===== */
         .btn-whatsapp {
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: #fff !important; border-color: transparent;
         }
         .btn-whatsapp:hover {
             color: #fff !important; border-color: transparent;
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45); transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+            transform: translateY(-2px);
         }
         .btn-whatsapp .wa-dot {
             width: 8px; height: 8px; background: #fff; border-radius: 50%;
@@ -202,7 +137,6 @@
         .card-title { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: var(--text-secondary); margin-bottom: 10px; }
         .card-value { font-size: 1.6rem; font-weight: 800; }
         .entrada { color: var(--success); } .saida { color: var(--danger); } .saldo { color: var(--accent); }
-        .card-sub { font-size: 0.68rem; color: var(--text-secondary); font-weight: 600; margin-top: 6px; }
         .filter-bar {
             background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 20px;
             padding: 14px 18px; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px;
@@ -230,12 +164,14 @@
             font-size: 0.65rem; border-bottom: 2px solid var(--border);
         }
         th:hover { color: var(--accent); }
+        body.dark th { background: rgba(30, 41, 59, 0.95); }
         td { padding: 10px; border-bottom: 1px solid var(--border); color: var(--text); }
-        tr:hover td { background: rgba(99, 102, 241, 0.05); }
+        tr:hover td { background: rgba(99, 102, 241, 0.03); }
         .debito-row td:first-child { border-left: 3px solid var(--danger); }
         .credito-row td:first-child { border-left: 3px solid var(--success); }
         .severity-high { background: rgba(239, 68, 68, 0.08) !important; }
         .severity-medium { background: rgba(245, 158, 11, 0.08) !important; }
+        .severity-low { background: rgba(16, 185, 129, 0.05) !important; }
         .aging-badge { padding: 2px 8px; border-radius: 20px; font-size: 0.65rem; font-weight: 600; }
         .aging-30 { background: #dcfce7; color: #166534; }
         .aging-60 { background: #fef3c7; color: #92400e; }
@@ -293,8 +229,8 @@
         .calendar-cell .day-num { font-weight: 700; font-size: 0.85rem; }
         .calendar-cell .mini-entrada { font-size: 0.58rem; color: var(--success); font-weight: 600; }
         .calendar-cell .mini-saida { font-size: 0.58rem; color: var(--danger); font-weight: 600; }
-        .best-month { background: rgba(16, 185, 129, 0.10); font-weight: 700; }
-        .worst-month { background: rgba(239, 68, 68, 0.10); font-weight: 700; }
+        .best-month { background: rgba(16, 185, 129, 0.08); font-weight: 700; }
+        .worst-month { background: rgba(239, 68, 68, 0.08); font-weight: 700; }
         .info-selected {
             background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 16px;
             padding: 12px 18px; border: 1px solid var(--accent-light); box-shadow: var(--shadow);
@@ -306,6 +242,7 @@
             color: var(--text-secondary); transition: all 0.2s;
         }
         .info-selected button:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+        /* ===== ESTILOS AVANÇADOS ===== */
         .score-circle {
             width: 200px; height: 200px; border-radius: 50%; display: flex; flex-direction: column;
             align-items: center; justify-content: center; margin: 0 auto; color: #fff;
@@ -320,11 +257,11 @@
         }
         .score-item .score-item-lbl { flex: 1; font-size: 0.8rem; font-weight: 600; }
         .score-item .score-item-val { font-size: 0.9rem; font-weight: 800; color: var(--accent); }
-        .score-item .score-bar { width: 100%; height: 6px; background: var(--border); border-radius: 6px; overflow: hidden; margin-top: 6px; }
-        .score-item .score-bar-fill { height: 100%; border-radius: 6px; transition: width 0.6s; }
         .matrix-table { font-size: 0.62rem; }
         .matrix-table th, .matrix-table td { padding: 6px 5px; text-align: center; }
         .matrix-table th:first-child, .matrix-table td:first-child { text-align: left; position: sticky; left: 0; background: var(--card-solid); z-index: 2; }
+
+        /* ===== RELATÓRIO EXECUTIVO MELHORADO ===== */
         .exec-hero {
             background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
             color: #fff; border-radius: 24px; padding: 28px 32px;
@@ -342,7 +279,9 @@
             background: rgba(255,255,255,0.2); font-size: 0.7rem; font-weight: 700;
             letter-spacing: 1px; margin-top: 12px; position: relative;
         }
-        .exec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+        .exec-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;
+        }
         .exec-kpi-card {
             background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 18px;
             padding: 18px 20px; border: 1px solid var(--border); box-shadow: var(--shadow);
@@ -356,6 +295,9 @@
         .kpi-trend.up { color: #166534; background: #dcfce7; }
         .kpi-trend.down { color: #991b1b; background: #fee2e2; }
         .kpi-trend.neutral { color: #92400e; background: #fef3c7; }
+        body.dark .kpi-trend.up { color: #6ee7b7; background: rgba(16,185,129,0.15); }
+        body.dark .kpi-trend.down { color: #fca5a5; background: rgba(239,68,68,0.15); }
+        body.dark .kpi-trend.neutral { color: #fbbf24; background: rgba(245,158,11,0.15); }
         .exec-section {
             background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 20px;
             padding: 22px 26px; border: 1px solid var(--border); box-shadow: var(--shadow);
@@ -393,10 +335,10 @@
             display: flex; gap: 12px; align-items: flex-start; font-size: 0.82rem;
             border-left: 4px solid;
         }
-        .exec-alert.warn { background: rgba(245,158,11,0.10); border-color: var(--warning); }
-        .exec-alert.danger { background: rgba(239,68,68,0.10); border-color: var(--danger); }
-        .exec-alert.ok { background: rgba(16,185,129,0.10); border-color: var(--success); }
-        .exec-alert.info { background: rgba(99,102,241,0.10); border-color: var(--accent); }
+        .exec-alert.warn { background: rgba(245,158,11,0.08); border-color: var(--warning); }
+        .exec-alert.danger { background: rgba(239,68,68,0.08); border-color: var(--danger); }
+        .exec-alert.ok { background: rgba(16,185,129,0.08); border-color: var(--success); }
+        .exec-alert.info { background: rgba(99,102,241,0.08); border-color: var(--accent); }
         .exec-alert .alert-icon { font-size: 1.2rem; line-height: 1; }
         .exec-alert .alert-text { flex: 1; line-height: 1.5; }
         .exec-alert .alert-text strong { color: var(--text); }
@@ -472,22 +414,13 @@
                     <h1>📊 Gestão Financeira Premium</h1>
                 </div>
                 <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-                    <div class="theme-selector">
-                        <span>🎨</span>
-                        <select id="themeSelect" aria-label="Tema">
-                            <option value="">☀️ Claro</option>
-                            <option value="amarelo-preto">🟡⚫ Amarelo e Preto</option>
-                            <option value="preto">⚫ Preto</option>
-                            <option value="branco">⚪ Branco</option>
-                            <option value="azul-escuro">🔵 Azul Escuro</option>
-                        </select>
-                    </div>
                     <button class="btn" id="refreshDataBtn">⟳ Atualizar</button>
                     <a href="https://wa.me/5545998542440?text=Ol%C3%A1%20Daniel!%20Preciso%20de%20ajuda%20com%20o%20painel%20financeiro."
                        target="_blank" rel="noopener" class="btn btn-whatsapp"
                        title="Falar com Daniel (Admin) - WhatsApp 45 99854-2440">
-                        <span class="wa-dot"></span> 💬 Suporte Whats
+                        <span class="wa-dot"></span> 💬 Daniel (Admin) • 45 99854-2440
                     </a>
+                    <button class="btn" id="darkModeToggle">🌙</button>
                     <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSWlUNgP29Erp8Rh5AZPg430wul7T9IwPBPgozPQpO2ig9g8gpJoTn4JNfcKAbBSNH59VngkPE4A7dF/pub" target="_blank" class="btn" rel="noopener">📊 Planilha</a>
                     <button class="btn" id="printBtn">🖨️</button>
                 </div>
@@ -500,10 +433,10 @@
             <!-- Resumo Geral -->
             <div id="resumo" class="page active">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">💰 Entradas</div><div class="card-value entrada" id="totalCreditos">R$ 0,00</div><div class="card-sub" id="totalCreditosSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">📤 Saídas</div><div class="card-value saida" id="totalDebitos">R$ 0,00</div><div class="card-sub" id="totalDebitosSub">—</div></div>
-                    <div class="card card-saldo"><div class="card-title">⚖️ Saldo</div><div class="card-value saldo" id="saldoLiquido">R$ 0,00</div><div class="card-sub" id="saldoLiquidoSub">—</div></div>
-                    <div class="card"><div class="card-title">📋 Transações</div><div class="card-value" id="totalTransacoes" style="color:var(--purple);">0</div><div class="card-sub" id="totalTransacoesSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">💰 Entradas</div><div class="card-value entrada" id="totalCreditos">R$ 0,00</div></div>
+                    <div class="card card-saida"><div class="card-title">📤 Saídas</div><div class="card-value saida" id="totalDebitos">R$ 0,00</div></div>
+                    <div class="card card-saldo"><div class="card-title">⚖️ Saldo</div><div class="card-value saldo" id="saldoLiquido">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">📋 Transações</div><div class="card-value" id="totalTransacoes" style="color:var(--purple);">0</div></div>
                 </div>
                 <div class="filter-bar" id="filtroResumo"></div>
                 <div class="table-container">
@@ -521,9 +454,9 @@
             <!-- Débitos -->
             <div id="debitos" class="page">
                 <div class="cards-row">
-                    <div class="card card-saida"><div class="card-title">💰 Total Débitos</div><div class="card-value saida" id="debTotal">R$ 0,00</div><div class="card-sub" id="debTotalSub">—</div></div>
-                    <div class="card"><div class="card-title">📊 Média / Mediana</div><div class="card-value" id="debMedia" style="color:var(--danger);">R$ 0,00</div><div class="card-sub" id="debMediaSub">—</div></div>
-                    <div class="card"><div class="card-title">🔢 Quantidade</div><div class="card-value" id="debQtd" style="color:var(--danger);">0</div><div class="card-sub" id="debQtdSub">—</div></div>
+                    <div class="card card-saida"><div class="card-title">💰 Total Débitos</div><div class="card-value saida" id="debTotal">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">📊 Média</div><div class="card-value" id="debMedia" style="color:var(--danger);">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">🔢 Quantidade</div><div class="card-value" id="debQtd" style="color:var(--danger);">0</div></div>
                 </div>
                 <div class="filter-bar" id="filtroDebitos"></div>
                 <div class="table-container">
@@ -549,9 +482,9 @@
             <!-- Créditos -->
             <div id="creditos" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">💰 Total Créditos</div><div class="card-value entrada" id="credTotal">R$ 0,00</div><div class="card-sub" id="credTotalSub">—</div></div>
-                    <div class="card"><div class="card-title">📊 Média / Mediana</div><div class="card-value" id="credMedia" style="color:var(--success);">R$ 0,00</div><div class="card-sub" id="credMediaSub">—</div></div>
-                    <div class="card"><div class="card-title">🔢 Quantidade</div><div class="card-value" id="credQtd" style="color:var(--success);">0</div><div class="card-sub" id="credQtdSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">💰 Total Créditos</div><div class="card-value entrada" id="credTotal">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">📊 Média</div><div class="card-value" id="credMedia" style="color:var(--success);">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">🔢 Quantidade</div><div class="card-value" id="credQtd" style="color:var(--success);">0</div></div>
                 </div>
                 <div class="filter-bar" id="filtroCreditos"></div>
                 <div class="table-container">
@@ -577,10 +510,10 @@
             <!-- D.R.E. -->
             <div id="dre" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">💰 Receita Bruta</div><div class="card-value entrada" id="dreReceita">R$ 0,00</div><div class="card-sub" id="dreReceitaSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">📤 Despesas</div><div class="card-value saida" id="dreDespesa">R$ 0,00</div><div class="card-sub" id="dreDespesaSub">—</div></div>
-                    <div class="card card-saldo"><div class="card-title">⚖️ Resultado</div><div class="card-value saldo" id="dreResultado">R$ 0,00</div><div class="card-sub" id="dreResultadoSub">—</div></div>
-                    <div class="card"><div class="card-title">📊 Margem</div><div class="card-value" id="dreMargem">0,0%</div><div class="card-sub" id="dreMargemSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">💰 Receita Bruta</div><div class="card-value entrada" id="dreReceita">R$ 0,00</div></div>
+                    <div class="card card-saida"><div class="card-title">📤 Despesas</div><div class="card-value saida" id="dreDespesa">R$ 0,00</div></div>
+                    <div class="card card-saldo"><div class="card-title">⚖️ Resultado</div><div class="card-value saldo" id="dreResultado">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">📊 Margem</div><div class="card-value" id="dreMargem">0,0%</div></div>
                 </div>
                 <div class="filter-bar" id="filtroDre"></div>
                 <div class="table-container">
@@ -595,10 +528,10 @@
             <!-- Tendências -->
             <div id="tendencias" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">📈 Cresc. Receitas</div><div class="card-value entrada" id="tendCrescReceita">0%</div><div class="card-sub" id="tendCrescReceitaSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">📉 Cresc. Despesas</div><div class="card-value saida" id="tendCrescDespesa">0%</div><div class="card-sub" id="tendCrescDespesaSub">—</div></div>
-                    <div class="card"><div class="card-title">🔮 Proj. Receita</div><div class="card-value" id="tendProjReceita">R$ 0,00</div><div class="card-sub" id="tendProjReceitaSub">—</div></div>
-                    <div class="card"><div class="card-title">⚖️ Proj. Resultado</div><div class="card-value" id="tendProjResultado">R$ 0,00</div><div class="card-sub" id="tendProjResultadoSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">📈 Cresc. Receitas</div><div class="card-value entrada" id="tendCrescReceita">0%</div></div>
+                    <div class="card card-saida"><div class="card-title">📉 Cresc. Despesas</div><div class="card-value saida" id="tendCrescDespesa">0%</div></div>
+                    <div class="card"><div class="card-title">🔮 Proj. Receita</div><div class="card-value" id="tendProjReceita">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">⚖️ Proj. Resultado</div><div class="card-value" id="tendProjResultado">R$ 0,00</div></div>
                 </div>
                 <div class="filter-bar" id="filtroTendencias"></div>
                 <div class="charts-row">
@@ -610,9 +543,9 @@
             <!-- Bancos -->
             <div id="bancos" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">🏦 Entradas</div><div class="card-value entrada" id="banTotalCred">R$ 0,00</div><div class="card-sub" id="banTotalCredSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">🏦 Saídas</div><div class="card-value saida" id="banTotalDeb">R$ 0,00</div><div class="card-sub" id="banTotalDebSub">—</div></div>
-                    <div class="card card-saldo"><div class="card-title">⚖️ Saldo</div><div class="card-value saldo" id="banSaldo">R$ 0,00</div><div class="card-sub" id="banSaldoSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">🏦 Entradas</div><div class="card-value entrada" id="banTotalCred">R$ 0,00</div></div>
+                    <div class="card card-saida"><div class="card-title">🏦 Saídas</div><div class="card-value saida" id="banTotalDeb">R$ 0,00</div></div>
+                    <div class="card card-saldo"><div class="card-title">⚖️ Saldo</div><div class="card-value saldo" id="banSaldo">R$ 0,00</div></div>
                 </div>
                 <div class="filter-bar" id="filtroBancos"></div>
                 <div class="charts-row">
@@ -624,8 +557,8 @@
             <!-- Pessoas -->
             <div id="pessoas" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">👤 Maior Recebedor</div><div class="card-value" id="pesMaiorCredor" style="font-size:1rem;">-</div><div class="card-sub" id="pesMaiorCredorSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">👤 Maior Fornecedor</div><div class="card-value" id="pesMaiorDevedor" style="font-size:1rem;">-</div><div class="card-sub" id="pesMaiorDevedorSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">👤 Maior Recebedor</div><div class="card-value" id="pesMaiorCredor" style="font-size:1rem;">-</div></div>
+                    <div class="card card-saida"><div class="card-title">👤 Maior Fornecedor</div><div class="card-value" id="pesMaiorDevedor" style="font-size:1rem;">-</div></div>
                 </div>
                 <div class="filter-bar" id="filtroPessoas"></div>
                 <div class="charts-row">
@@ -637,8 +570,8 @@
             <!-- Formas de Pagamento -->
             <div id="formaspagamento" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">💳 +Usada (Entrada)</div><div class="card-value entrada" id="fpMaisUsadaCred" style="font-size:1rem;">-</div><div class="card-sub" id="fpMaisUsadaCredSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">💳 +Usada (Saída)</div><div class="card-value saida" id="fpMaisUsadaDeb" style="font-size:1rem;">-</div><div class="card-sub" id="fpMaisUsadaDebSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">💳 +Usada (Entrada)</div><div class="card-value entrada" id="fpMaisUsadaCred" style="font-size:1rem;">-</div></div>
+                    <div class="card card-saida"><div class="card-title">💳 +Usada (Saída)</div><div class="card-value saida" id="fpMaisUsadaDeb" style="font-size:1rem;">-</div></div>
                 </div>
                 <div class="filter-bar" id="filtroFormasPag"></div>
                 <div class="charts-row">
@@ -650,11 +583,11 @@
             <!-- Inadimplência -->
             <div id="inadimplencia" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">🟢 Créditos Pendentes</div><div class="card-value entrada" id="inadPendCred">R$ 0,00</div><div class="card-sub" id="inadPendCredSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">🔴 Débitos Pendentes</div><div class="card-value saida" id="inadPendDeb">R$ 0,00</div><div class="card-sub" id="inadPendDebSub">—</div></div>
-                    <div class="card card-saldo"><div class="card-title">💸 Total Vencido</div><div class="card-value saldo" id="inadTotalVencido">R$ 0,00</div><div class="card-sub" id="inadTotalVencidoSub">—</div></div>
-                    <div class="card"><div class="card-title">📋 Qtd. Pendências</div><div class="card-value" id="inadQtdPendente">0</div><div class="card-sub" id="inadQtdPendenteSub">—</div></div>
-                    <div class="card"><div class="card-title">📅 Dias Médios Atraso</div><div class="card-value" id="inadDiasMedio">0</div><div class="card-sub" id="inadDiasMedioSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">🟢 Créditos Pendentes</div><div class="card-value entrada" id="inadPendCred">R$ 0,00</div></div>
+                    <div class="card card-saida"><div class="card-title">🔴 Débitos Pendentes</div><div class="card-value saida" id="inadPendDeb">R$ 0,00</div></div>
+                    <div class="card card-saldo"><div class="card-title">💸 Total Vencido</div><div class="card-value saldo" id="inadTotalVencido">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">📋 Qtd. Pendências</div><div class="card-value" id="inadQtdPendente">0</div></div>
+                    <div class="card"><div class="card-title">📅 Dias Médios Atraso</div><div class="card-value" id="inadDiasMedio">0</div></div>
                 </div>
                 <div class="filter-bar" id="filtroInadimplencia"></div>
                 <div class="table-container" style="max-height:500px;">
@@ -695,14 +628,14 @@
             <!-- Comparativo Anual -->
             <div id="comparativo" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">📅 Receita (Ano)</div><div class="card-value entrada" id="compRecSel">R$ 0,00</div><div class="card-sub" id="compRecSelSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">📅 Despesa (Ano)</div><div class="card-value saida" id="compDesSel">R$ 0,00</div><div class="card-sub" id="compDesSelSub">—</div></div>
-                    <div class="card card-saldo"><div class="card-title">⚖️ Resultado</div><div class="card-value saldo" id="compResSel">R$ 0,00</div><div class="card-sub" id="compResSelSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">📅 Receita (Ano)</div><div class="card-value entrada" id="compRecSel">R$ 0,00</div></div>
+                    <div class="card card-saida"><div class="card-title">📅 Despesa (Ano)</div><div class="card-value saida" id="compDesSel">R$ 0,00</div></div>
+                    <div class="card card-saldo"><div class="card-title">⚖️ Resultado</div><div class="card-value saldo" id="compResSel">R$ 0,00</div></div>
                 </div>
                 <div class="filter-bar" id="filtroComparativo"></div>
                 <div class="table-container" style="max-height:600px;">
                     <table id="tabelaComparativo">
-                        <thead><tr><th>Ano</th><th>Receitas (R$)</th><th>Despesas (R$)</th><th>Resultado (R$)</th><th>Margem (%)</th><th>Cresc. vs Ano Anterior</th></tr></thead>
+                        <thead><tr><th>Ano</th><th>Receitas (R$)</th><th>Despesas (R$)</th><th>Resultado (R$)</th><th>Margem (%)</th></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
@@ -711,10 +644,10 @@
             <!-- Análise Mensal -->
             <div id="analisemensal" class="page">
                 <div class="cards-row">
-                    <div class="card card-entrada"><div class="card-title">🏆 Melhor Mês</div><div class="card-value entrada" id="amMelhorMes" style="font-size:1.1rem;">-</div><div class="card-sub" id="amMelhorMesSub">—</div></div>
-                    <div class="card card-saida"><div class="card-title">⚠️ Pior Mês</div><div class="card-value saida" id="amPiorMes" style="font-size:1.1rem;">-</div><div class="card-sub" id="amPiorMesSub">—</div></div>
-                    <div class="card card-saldo"><div class="card-title">📊 Média Mensal</div><div class="card-value saldo" id="amMediaMensal">R$ 0,00</div><div class="card-sub" id="amMediaMensalSub">—</div></div>
-                    <div class="card"><div class="card-title">📈 Meses Positivos</div><div class="card-value" id="amMesesPositivos" style="color:var(--success);">0</div><div class="card-sub" id="amMesesPositivosSub">—</div></div>
+                    <div class="card card-entrada"><div class="card-title">🏆 Melhor Mês</div><div class="card-value entrada" id="amMelhorMes" style="font-size:1.1rem;">-</div></div>
+                    <div class="card card-saida"><div class="card-title">⚠️ Pior Mês</div><div class="card-value saida" id="amPiorMes" style="font-size:1.1rem;">-</div></div>
+                    <div class="card card-saldo"><div class="card-title">📊 Média Mensal</div><div class="card-value saldo" id="amMediaMensal">R$ 0,00</div></div>
+                    <div class="card"><div class="card-title">📈 Meses Positivos</div><div class="card-value" id="amMesesPositivos" style="color:var(--success);">0</div></div>
                 </div>
                 <div class="filter-bar" id="filtroAnaliseMensal">
                     <div class="filter-group"><label>Ano</label><select id="amAno"><option value="">Todos</option></select></div>
@@ -722,7 +655,7 @@
                 </div>
                 <div class="table-container" style="max-height:500px;">
                     <table id="tabelaAnaliseMensal">
-                        <thead><tr><th>Mês</th><th>Receitas (R$)</th><th>Despesas (R$)</th><th>Saldo (R$)</th><th>Margem (%)</th><th>Δ Saldo vs Ant.</th><th>Acumulado (R$)</th></tr></thead>
+                        <thead><tr><th>Mês</th><th>Receitas (R$)</th><th>Despesas (R$)</th><th>Saldo (R$)</th><th>Margem (%)</th><th>Acumulado (R$)</th></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
@@ -737,8 +670,8 @@
                 <div class="cards-row">
                     <div class="card card-saida"><div class="card-title">🔝 Maior Débito</div><div class="card-value saida" id="topMaiorDeb" style="font-size:1.1rem;">-</div></div>
                     <div class="card card-entrada"><div class="card-title">🔝 Maior Crédito</div><div class="card-value entrada" id="topMaiorCred" style="font-size:1.1rem;">-</div></div>
-                    <div class="card card-saldo"><div class="card-title">📊 Média / Mediana Déb.</div><div class="card-value saldo" id="topMediaDeb">R$ 0,00</div><div class="card-sub" id="topMediaDebSub">—</div></div>
-                    <div class="card card-saldo"><div class="card-title">📊 Média / Mediana Créd.</div><div class="card-value saldo" id="topMediaCred">R$ 0,00</div><div class="card-sub" id="topMediaCredSub">—</div></div>
+                    <div class="card card-saldo"><div class="card-title">📊 Média Débitos</div><div class="card-value saldo" id="topMediaDeb">R$ 0,00</div></div>
+                    <div class="card card-saldo"><div class="card-title">📊 Média Créditos</div><div class="card-value saldo" id="topMediaCred">R$ 0,00</div></div>
                 </div>
                 <div class="charts-row">
                     <div class="chart-box"><h3>🔴 Top 10 Maiores Débitos</h3><canvas id="topDesGrafico"></canvas></div>
@@ -771,7 +704,7 @@
                 <div class="chart-box"><h3>📊 Movimentação por Dia da Semana</h3><canvas id="dsGrafico"></canvas></div>
                 <div class="table-container">
                     <table id="dsTabela">
-                        <thead><tr><th>Dia</th><th>Entradas (R$)</th><th>Saídas (R$)</th><th>Saldo (R$)</th><th>Qtd. Trans.</th><th>Ticket Médio</th><th>% Saídas</th></tr></thead>
+                        <thead><tr><th>Dia</th><th>Entradas (R$)</th><th>Saídas (R$)</th><th>Saldo (R$)</th><th>Qtd. Trans.</th><th>Média Saída</th></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
@@ -804,11 +737,11 @@
                         </div>
                     </div>
                     <div class="card" style="flex:2 1 400px;">
-                        <div class="card-title">📋 Detalhamento dos Indicadores (4 Pilares)</div>
+                        <div class="card-title">📋 Detalhamento dos Indicadores</div>
                         <div id="scoreDetalhes"></div>
                     </div>
                 </div>
-                <div class="chart-box"><h3>📊 Comparativo dos Pilares (pontos)</h3><canvas id="scoreGrafico"></canvas></div>
+                <div class="chart-box"><h3>📊 Comparativo dos Indicadores (0-25)</h3><canvas id="scoreGrafico"></canvas></div>
             </div>
 
             <!-- Matriz Cat × Mês -->
@@ -834,27 +767,34 @@
                     <div class="exec-hero-date" id="execData">Gerado em --</div>
                     <span class="exec-status-badge" id="execStatusBadge">ANALISANDO...</span>
                 </div>
+
                 <div class="exec-grid" id="execKpisGrid"></div>
+
                 <div class="exec-section">
                     <h3>🚨 Alertas & Recomendações <span class="h3-badge" id="execAlertCount">0</span></h3>
                     <div id="execAlertas"></div>
                 </div>
+
                 <div class="exec-section">
                     <h3>💡 Insights Estratégicos</h3>
                     <div id="execInsights"></div>
                 </div>
+
                 <div class="exec-section">
                     <h3>📊 Comparativo Mês Atual vs Anterior</h3>
                     <div id="execComparativo"></div>
                 </div>
+
                 <div class="charts-row">
                     <div class="chart-box"><h3>📈 Receitas, Despesas e Resultado (12 Meses)</h3><canvas id="execGraficoMensal"></canvas></div>
                     <div class="chart-box"><h3>🥧 Composição das Despesas</h3><canvas id="execGraficoPizza"></canvas></div>
                 </div>
+
                 <div class="exec-section">
                     <h3>🏆 Top 8 Categorias de Despesa</h3>
                     <ul class="exec-list" id="execTopCat"></ul>
                 </div>
+
                 <div class="charts-row">
                     <div class="exec-section" style="flex:1 1 380px;">
                         <h3>👥 Top 8 Pessoas / Fornecedores</h3>
@@ -865,6 +805,7 @@
                         <ul class="exec-list" id="execTopBan"></ul>
                     </div>
                 </div>
+
                 <div class="charts-row">
                     <div class="exec-section" style="flex:1 1 380px;">
                         <h3>🏅 Top 5 Melhores Meses</h3>
@@ -875,6 +816,7 @@
                         <ul class="exec-list" id="execPiores"></ul>
                     </div>
                 </div>
+
                 <div class="exec-section">
                     <h3>📅 Últimos 12 Meses</h3>
                     <div class="table-container" style="max-height:none;">
@@ -901,30 +843,12 @@
             };
             const mesesNom = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
             const mesesAbrev = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+
             let selectedDay = { ano: null, mes: null, dia: null };
 
-            /* ============ HELPERS FINANCEIROS APRIMORADOS ============ */
             const fm = v => v == null || isNaN(v) ? '0,00' : Number(v).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             const fmp = v => v == null || isNaN(v) ? '0,0%' : Number(v).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%';
-            const sumBy = (arr, fn) => { let t = 0; for (const i of arr) if (!fn || fn(i)) t += i.valor; return Math.round(t * 100) / 100; };
-            const mean = arr => arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
-            const median = arr => {
-                if (!arr.length) return 0;
-                const s = [...arr].sort((a, b) => a - b);
-                const m = Math.floor(s.length / 2);
-                return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
-            };
-            const stdDev = arr => {
-                if (arr.length < 2) return 0;
-                const m = mean(arr);
-                return Math.sqrt(arr.reduce((a, b) => a + (b - m) ** 2, 0) / arr.length);
-            };
-            const pct = (part, total) => total > 0 ? (part / total) * 100 : 0;
-            const growth = (curr, prev) => {
-                if (prev === 0) return curr > 0 ? 100 : 0;
-                return ((curr - prev) / Math.abs(prev)) * 100;
-            };
-            const safeDiv = (a, b) => b === 0 ? 0 : a / b;
+            const sumBy = (arr, fn) => { let t = 0; for (const i of arr) if (fn(i)) t += i.valor; return Math.round(t * 100) / 100; };
             const aggregateBy = (arr, kFn, vFn) => { const m = new Map(); for (const i of arr) { const k = kFn(i), v = vFn(i); m.set(k, (m.get(k) || 0) + v); } return m; };
             const compareMonthKeys = (a, b) => { const [y1, m1] = a.split('-').map(Number), [y2, m2] = b.split('-').map(Number); return y1 - y2 || m1 - m2; };
             const cache = { _f: {}, _m: null, _k: {}, inv() { this._f = {}; this._m = null; this._k = {}; },
@@ -939,19 +863,6 @@
                 setTimeout(() => d.remove(), 3000);
             }
 
-            /* ============ TEMA ============ */
-            const themeSelect = $('themeSelect');
-            const savedTheme = localStorage.getItem('theme') || '';
-            if (savedTheme) { document.body.setAttribute('data-theme', savedTheme); themeSelect.value = savedTheme; }
-            themeSelect.onchange = (e) => {
-                const t = e.target.value;
-                if (t) document.body.setAttribute('data-theme', t);
-                else document.body.removeAttribute('data-theme');
-                localStorage.setItem('theme', t);
-                setTimeout(() => Object.values(charts).forEach(ch => ch && ch.resize && ch.resize()), 300);
-            };
-
-            /* ============ SIDEBAR ============ */
             const sidebar = $('sidebar');
             const menuToggle = $('menuToggle');
             const sidebarToggle = $('sidebarToggle');
@@ -976,7 +887,6 @@
                 sidebar.classList.add('collapsed'); sidebarMinimize.textContent = '▶';
             }
 
-            /* ============ CHARTS ============ */
             function destroy(id) { if (charts[id]) { charts[id].destroy(); charts[id] = null; } }
             function ctx(id) { const c = $(id); if (!c) return null; destroy(id); c.style.display = 'block'; return c.getContext('2d'); }
 
@@ -1004,7 +914,6 @@
                         plugins: { tooltip: { callbacks: { label: x => `${x.label}: R$ ${fm(x.raw)}` } } } } });
             }
 
-            /* ============ CSV PARSER ============ */
             function parseCSV(txt) {
                 const rows = [], lines = txt.split(/\r?\n/).filter(l => l.trim());
                 for (const line of lines) {
@@ -1074,7 +983,6 @@
                 return parsed;
             }
 
-            /* ============ FILTERS ============ */
             function getFilterValues(pref) {
                 const el = (id) => $(pref + id)?.value || '';
                 return { cat: el('Categoria'), pes: el('Pessoa'), sta: el('Status'), fo: el('FormaPagamento'),
@@ -1134,7 +1042,6 @@
                 const el = $(id); if (!el) return;
                 el.textContent = el.textContent.includes('R$') ? `R$ ${fm(val)}` : String(Math.round(val));
             }
-            function setSub(id, txt) { const el = $(id); if (el) el.textContent = txt; }
 
             function buildTable(tid, data, rFn, lim = 200) {
                 const tb = document.querySelector(`#${tid} tbody`); if (!tb) return;
@@ -1143,21 +1050,17 @@
                 tb.appendChild(fg);
             }
 
-            /* ============ LINEAR REGRESSION COM CONFIANÇA ============ */
             function linearRegression(pts) {
-                const n = pts.length; if (n < 2) return { a: 0, b: 0, r2: 0, conf: 'baixa', stdErr: 0 };
+                const n = pts.length; if (n < 2) return { a: 0, b: 0, r2: 0 };
                 let sx = 0, sy = 0, sxy = 0, sx2 = 0, sy2 = 0;
                 for (const [x, y] of pts) { sx += x; sy += y; sxy += x * y; sx2 += x * x; sy2 += y * y; }
                 const d = n * sx2 - sx * sx;
-                if (Math.abs(d) < 1e-10) { const avg = sy / n; return { a: avg, b: 0, r2: 0, conf: 'baixa', stdErr: 0 }; }
+                if (Math.abs(d) < 1e-10) { const avg = sy / n; return { a: avg, b: 0, r2: 0 }; }
                 const b = (n * sxy - sx * sy) / d, a = (sy - b * sx) / n;
-                const yAvg = sy / n, ssTot = sy2 - n * yAvg * yAvg;
-                let ssRes = 0;
-                for (const [x, y] of pts) ssRes += (y - (a + b * x)) ** 2;
-                const r2 = ssTot > 1e-10 ? Math.max(0, Math.min(1, 1 - ssRes / ssTot)) : 0;
-                const stdErr = Math.sqrt(ssRes / Math.max(1, n - 2));
-                const conf = r2 >= 0.7 ? 'alta' : r2 >= 0.4 ? 'média' : 'baixa';
-                return { a, b, r2, conf, stdErr };
+                const yAvg = sy / n, ssTot = sy2 - n * yAvg * yAvg,
+                    ssRes = sy2 - 2 * a * sy - 2 * b * sxy + n * a * a + 2 * a * b * sx + b * b * sx2;
+                const r2 = ssTot > 1e-10 ? Math.max(0, 1 - ssRes / ssTot) : 0;
+                return { a, b, r2: Math.min(1, r2) };
             }
 
             function buildFilterHTML(pref) {
@@ -1219,19 +1122,11 @@
                 populateFilterSelects();
             }
 
-            /* ============ UPDATE RESUMO (com sub-info) ============ */
             function updateResumo() {
                 const f = filterData([...debitos, ...creditos], 'res');
                 const ent = sumBy(f, t => t.tipo === 'credito'), sai = sumBy(f, t => t.tipo === 'debito');
-                const saldo = ent - sai, mg = pct(saldo, ent);
-                animKPI('totalCreditos', ent); animKPI('totalDebitos', sai); animKPI('saldoLiquido', saldo);
+                animKPI('totalCreditos', ent); animKPI('totalDebitos', sai); animKPI('saldoLiquido', ent - sai);
                 $('totalTransacoes').textContent = f.length;
-                const nCred = f.filter(t => t.tipo === 'credito').length;
-                const nDeb = f.length - nCred;
-                setSub('totalCreditosSub', `${nCred} entrada(s) · ticket médio R$ ${fm(safeDiv(ent, nCred))}`);
-                setSub('totalDebitosSub', `${nDeb} saída(s) · ticket médio R$ ${fm(safeDiv(sai, nDeb))}`);
-                setSub('saldoLiquidoSub', `Margem ${fmp(mg)} · ${saldo >= 0 ? '🟢 Positivo' : '🔴 Negativo'}`);
-                setSub('totalTransacoesSub', `${nCred} créd. + ${nDeb} déb.`);
                 const st = sortState.res, sorted = sortBy(f, st.f, st.d);
                 updArrows('tabelaTransacoes', st.f, st.d);
                 buildTable('tabelaTransacoes', sorted, (tr, t) => {
@@ -1250,23 +1145,16 @@
                 doughnut('graficoCategoriasResumo', Object.keys(gastos), Object.values(gastos), ['#ef4444','#f59e0b','#10b981','#6366f1','#8b5cf6','#ec4899','#06b6d4']);
             }
 
-            /* ============ UPDATE LISTA ============ */
             function updateLista(tipo) {
                 const pref = tipo === 'debito' ? 'deb' : 'cred';
                 const arr = tipo === 'debito' ? debitos : creditos;
                 const tid = tipo === 'debito' ? 'tabelaDebitos' : 'tabelaCreditos';
                 const sk = tipo === 'debito' ? 'deb' : 'cre';
                 const f = filterData(arr, pref);
-                const tot = sumBy(f, () => true);
-                const valores = f.map(t => t.valor);
-                const med = mean(valores), mediana = median(valores), desvio = stdDev(valores);
-                const prefix = tipo === 'debito' ? 'deb' : 'cred';
-                animKPI(prefix + 'Total', tot);
-                animKPI(prefix + 'Media', med);
-                $(prefix + 'Qtd').textContent = f.length;
-                setSub(prefix + 'TotalSub', `Soma de ${f.length} transações`);
-                setSub(prefix + 'MediaSub', `Mediana R$ ${fm(mediana)} · Desvio R$ ${fm(desvio)}`);
-                setSub(prefix + 'QtdSub', `Ticket médio R$ ${fm(med)}`);
+                const tot = sumBy(f, () => true), med = f.length ? tot / f.length : 0;
+                animKPI(tipo === 'debito' ? 'debTotal' : 'credTotal', tot);
+                animKPI(tipo === 'debito' ? 'debMedia' : 'credMedia', med);
+                $(tipo === 'debito' ? 'debQtd' : 'credQtd').textContent = f.length;
                 const st = sortState[sk], sorted = sortBy(f, st.f, st.d);
                 updArrows(tid, st.f, st.d);
                 buildTable(tid, sorted, (tr, t) => {
@@ -1281,20 +1169,14 @@
                     [{ label: tipo, data: mk.map(k => mm.get(k)), borderColor: tipo === 'debito' ? '#ef4444' : '#10b981', fill: true }]);
             }
 
-            /* ============ UPDATE DRE COM SUBTOTAIS ============ */
             function updateDRE() {
                 const ano = $('dreAno')?.value || '', mes = $('dreMes')?.value || '';
                 const fil = a => a.filter(it => { if (ano && it.ano !== +ano) return false; if (mes && it.mes !== +mes) return false; return true; });
                 const rec = fil(creditos), desp = fil(debitos);
-                const tr = sumBy(rec, () => true), td = sumBy(desp, () => true);
-                const res = tr - td, mg = pct(res, tr);
+                const tr = sumBy(rec, () => true), td = sumBy(desp, () => true), res = tr - td, mg = tr > 0 ? (res / tr) * 100 : 0;
                 animKPI('dreReceita', tr); animKPI('dreDespesa', td); animKPI('dreResultado', res);
                 $('dreMargem').textContent = tr === 0 ? 'N/A' : fmp(mg);
                 $('dreMargem').style.color = res >= 0 ? 'var(--success)' : 'var(--danger)';
-                setSub('dreReceitaSub', `${rec.length} lançamento(s) · ticket médio R$ ${fm(safeDiv(tr, rec.length))}`);
-                setSub('dreDespesaSub', `${desp.length} lançamento(s) · ticket médio R$ ${fm(safeDiv(td, desp.length))}`);
-                setSub('dreResultadoSub', res >= 0 ? '🟢 Superávit' : '🔴 Déficit');
-                setSub('dreMargemSub', tr > 0 ? `Resultado / Receita` : 'Sem receita');
                 const cr = {}, cd = {};
                 for (const c of rec) cr[c.categoria] = (cr[c.categoria] || 0) + c.valor;
                 for (const d of desp) cd[d.categoria] = (cd[d.categoria] || 0) + d.valor;
@@ -1302,19 +1184,15 @@
                 doughnut('drePizzaDespesas', Object.keys(cd).sort((a, b) => cd[b] - cd[a]), Object.values(cd), ['#ef4444','#f87171','#fca5a5','#fecaca','#fee2e2']);
                 const tb = document.querySelector('#tabelaDRE tbody'); tb.innerHTML = '';
                 const add = h => { const tr = document.createElement('tr'); tr.innerHTML = h; tb.appendChild(tr); };
-                const addSection = (label, val, p) => add(`<td style="background:rgba(99,102,241,0.08);font-weight:800;">${label}</td><td style="background:rgba(99,102,241,0.08);font-weight:800;">R$ ${fm(val)}</td><td style="background:rgba(99,102,241,0.08);font-weight:800;">${p}</td>`);
-                addSection('📈 RECEITAS', tr, '100,0%');
-                const recArr = Object.entries(cr).sort((a, b) => b[1] - a[1]);
-                for (const [c, v] of recArr) add(`<td style="padding-left:24px;">${c}</td><td>R$ ${fm(v)}</td><td>${fmp(pct(v, tr))}</td>`);
-                add(`<td style="font-weight:700;">↳ Total Receitas</td><td style="font-weight:700;color:var(--success);">R$ ${fm(tr)}</td><td style="font-weight:700;">100,0%</td>`);
-                addSection('📉 DESPESAS', td, '100,0%');
-                const despArr = Object.entries(cd).sort((a, b) => b[1] - a[1]);
-                for (const [c, v] of despArr) add(`<td style="padding-left:24px;">${c}</td><td>R$ ${fm(v)}</td><td>${fmp(pct(v, td))} <span style="color:var(--text-secondary);font-size:0.65rem;">(${fmp(pct(v, tr))} da rec.)</span></td>`);
-                add(`<td style="font-weight:700;">↳ Total Despesas</td><td style="font-weight:700;color:var(--danger);">R$ ${fm(td)}</td><td style="font-weight:700;">100,0%</td>`);
-                add(`<td style="background:rgba(99,102,241,0.15);font-weight:800;font-size:0.85rem;">⚖️ RESULTADO LÍQUIDO</td><td style="background:rgba(99,102,241,0.15);font-weight:800;color:${res>=0?'var(--success)':'var(--danger)'};">R$ ${fm(res)}</td><td style="background:rgba(99,102,241,0.15);font-weight:800;">${tr===0?'N/A':fmp(mg)}</td>`);
+                add('<td><strong>RECEITAS</strong></td><td></td><td></td>');
+                for (const [c, v] of Object.entries(cr).sort((a, b) => b[1] - a[1])) add(`<td>${c}</td><td>R$ ${fm(v)}</td><td>${tr>0?fmp((v/tr)*100):'0,0%'}</td>`);
+                add(`<td><strong>Total Receitas</strong></td><td><strong>R$ ${fm(tr)}</strong></td><td>100,0%</td>`);
+                add('<td><strong>DESPESAS</strong></td><td></td><td></td>');
+                for (const [c, v] of Object.entries(cd).sort((a, b) => b[1] - a[1])) add(`<td>${c}</td><td>R$ ${fm(v)}</td><td>${td>0?fmp((v/td)*100):'0,0%'}</td>`);
+                add(`<td><strong>Total Despesas</strong></td><td><strong>R$ ${fm(td)}</strong></td><td>100,0%</td>`);
+                add(`<td><strong>RESULTADO</strong></td><td style="color:${res>=0?'var(--success)':'var(--danger)'};font-weight:700;">R$ ${fm(res)}</td><td>${tr===0?'N/A':fmp(mg)}</td>`);
             }
 
-            /* ============ UPDATE TENDÊNCIAS COM CONFIANÇA ============ */
             function updateTendencias() {
                 const af = $('tendAno')?.value || '', cf = $('tendCategoria')?.value || '';
                 const fil = a => a.filter(it => { if (af && it.ano !== +af) return false; if (cf && it.categoria !== cf) return false; return true; });
@@ -1322,35 +1200,19 @@
                 const mr = aggregateBy(rec, t => `${t.ano}-${String(t.mes).padStart(2,'0')}`, t => t.valor);
                 const md = aggregateBy(desp, t => `${t.ano}-${String(t.mes).padStart(2,'0')}`, t => t.valor);
                 const ks = [...new Set([...mr.keys(), ...md.keys()])].sort(compareMonthKeys);
-                if (ks.length < 2) {
-                    ['tendCrescReceita','tendCrescDespesa','tendProjReceita','tendProjResultado'].forEach(id => {
-                        const el = $(id); if (el) el.textContent = id.includes('Proj') ? 'R$ 0,00' : 'N/D';
-                    });
-                    ['tendCrescReceitaSub','tendCrescDespesaSub','tendProjReceitaSub','tendProjResultadoSub'].forEach(id => setSub(id, 'Dados insuficientes'));
-                    return;
-                }
+                if (ks.length < 2) { ['tendCrescReceita','tendCrescDespesa','tendProjReceita','tendProjResultado'].forEach(id => { const el = $(id); if (el) el.textContent = id.includes('Proj') ? 'R$ 0,00' : 'N/D'; }); return; }
                 const n = ks.length;
                 const rv = ks.map(k => mr.get(k) || 0), dv = ks.map(k => md.get(k) || 0);
                 const rr = linearRegression(rv.map((v, i) => [i, v])), rd = linearRegression(dv.map((v, i) => [i, v]));
-                const avgR = mean(rv), avgD = mean(dv);
-                const crescR = growth(rv[n-1], rv[0]), crescD = growth(dv[n-1], dv[0]);
-                const crescRMensal = avgR > 0 ? (rr.b / avgR) * 100 : 0;
-                const crescDMensal = avgD > 0 ? (rd.b / avgD) * 100 : 0;
-                $('tendCrescReceita').textContent = fmp(crescRMensal);
-                $('tendCrescDespesa').textContent = fmp(crescDMensal);
-                $('tendCrescReceita').style.color = crescRMensal >= 0 ? 'var(--success)' : 'var(--danger)';
-                $('tendCrescDespesa').style.color = crescDMensal <= 0 ? 'var(--success)' : 'var(--danger)';
-                setSub('tendCrescReceitaSub', `Confiança ${rr.conf} (R² ${(rr.r2*100).toFixed(0)}%)`);
-                setSub('tendCrescDespesaSub', `Confiança ${rd.conf} (R² ${(rd.r2*100).toFixed(0)}%)`);
-                const projR = Math.max(0, rr.a + rr.b * n), projD = Math.max(0, rd.a + rd.b * n);
-                animKPI('tendProjReceita', projR);
-                animKPI('tendProjResultado', projR - projD);
-                setSub('tendProjReceitaSub', `± R$ ${fm(rr.stdErr)} · ${rr.conf}`);
-                setSub('tendProjResultadoSub', `Proj. despesa R$ ${fm(projD)}`);
+                const avgR = rv.reduce((a, b) => a + b, 0) / n, avgD = dv.reduce((a, b) => a + b, 0) / n;
+                $('tendCrescReceita').textContent = fmp(avgR > 0 ? (rr.b / avgR) * 100 : 0);
+                $('tendCrescDespesa').textContent = fmp(avgD > 0 ? (rd.b / avgD) * 100 : 0);
+                animKPI('tendProjReceita', Math.max(0, rr.a + rr.b * n));
+                animKPI('tendProjResultado', Math.max(0, rr.a + rr.b * n) - Math.max(0, rd.a + rd.b * n));
                 const szR = Array(12).fill(0), szD = Array(12).fill(0), cR = Array(12).fill(0), cD = Array(12).fill(0);
                 for (const t of rec) { szR[t.mes - 1] += t.valor; cR[t.mes - 1]++; }
                 for (const t of desp) { szD[t.mes - 1] += t.valor; cD[t.mes - 1]++; }
-                const msR = szR.map((v, i) => safeDiv(v, cR[i])), msD = szD.map((v, i) => safeDiv(v, cD[i]));
+                const msR = szR.map((v, i) => cR[i] ? v / cR[i] : 0), msD = szD.map((v, i) => cD[i] ? v / cD[i] : 0);
                 const cSz = ctx('tendSazonalidade');
                 if (cSz) charts['tendSazonalidade'] = new Chart(cSz, { type: 'bar', data: { labels: mesesAbrev, datasets: [
                     { label: 'Média Receitas', data: msR, backgroundColor: '#10b981', borderRadius: 6 },
@@ -1373,12 +1235,8 @@
                 const af = $('banAno')?.value || '', mf = $('banMes')?.value || '';
                 const fil = a => a.filter(it => { if (af && it.ano !== +af) return false; if (mf && it.mes !== +mf) return false; return true; });
                 const rec = fil(creditos), desp = fil(debitos);
-                const tr = sumBy(rec, () => true), td = sumBy(desp, () => true);
-                animKPI('banTotalCred', tr); animKPI('banTotalDeb', td); animKPI('banSaldo', tr - td);
-                const nBancos = new Set([...rec.map(t => t.banco), ...desp.map(t => t.banco)]).size;
-                setSub('banTotalCredSub', `${new Set(rec.map(t=>t.banco)).size} banco(s)`);
-                setSub('banTotalDebSub', `${new Set(desp.map(t=>t.banco)).size} banco(s)`);
-                setSub('banSaldoSub', `${nBancos} banco(s) · ${tr - td >= 0 ? '🟢 Positivo' : '🔴 Negativo'}`);
+                animKPI('banTotalCred', sumBy(rec, () => true)); animKPI('banTotalDeb', sumBy(desp, () => true));
+                animKPI('banSaldo', sumBy(rec, () => true) - sumBy(desp, () => true));
                 const c1 = aggregateBy(rec, t => t.banco, t => t.valor), c2 = aggregateBy(desp, t => t.banco, t => t.valor);
                 doughnut('banPizzaCred', [...c1.keys()], [...c1.values()], ['#10b981','#34d399','#6ee7b7','#a7f3d0']);
                 doughnut('banPizzaDeb', [...c2.keys()], [...c2.values()], ['#ef4444','#f87171','#fca5a5','#fecaca']);
@@ -1391,10 +1249,8 @@
                 const dm = aggregateBy(fil(debitos), t => t.pessoa, t => t.valor);
                 const mc = [...cm.entries()].sort((a, b) => b[1] - a[1])[0];
                 const md2 = [...dm.entries()].sort((a, b) => b[1] - a[1])[0];
-                $('pesMaiorCredor').textContent = mc ? `${mc[0]}` : '-';
-                $('pesMaiorDevedor').textContent = md2 ? `${md2[0]}` : '-';
-                setSub('pesMaiorCredorSub', mc ? `R$ ${fm(mc[1])} · ${cm.size} pessoa(s)` : '—');
-                setSub('pesMaiorDevedorSub', md2 ? `R$ ${fm(md2[1])} · ${dm.size} pessoa(s)` : '—');
+                $('pesMaiorCredor').textContent = mc ? `${mc[0]} (R$ ${fm(mc[1])})` : '-';
+                $('pesMaiorDevedor').textContent = md2 ? `${md2[0]} (R$ ${fm(md2[1])})` : '-';
                 bar('pesGraficoCred', [...cm.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(x => x[0]), [...cm.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(x => x[1]), '#34d399', true);
                 bar('pesGraficoDeb', [...dm.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(x => x[0]), [...dm.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(x => x[1]), '#f87171', true);
             }
@@ -1408,10 +1264,6 @@
                 const md2 = [...dm.entries()].sort((a, b) => b[1] - a[1])[0];
                 $('fpMaisUsadaCred').textContent = mc ? mc[0] : '-';
                 $('fpMaisUsadaDeb').textContent = md2 ? md2[0] : '-';
-                const totC = sumBy([...cm.values()].map(v => ({ valor: v })), () => true);
-                const totD = sumBy([...dm.values()].map(v => ({ valor: v })), () => true);
-                setSub('fpMaisUsadaCredSub', mc ? `R$ ${fm(mc[1])} (${fmp(pct(mc[1], totC))})` : '—');
-                setSub('fpMaisUsadaDebSub', md2 ? `R$ ${fm(md2[1])} (${fmp(pct(md2[1], totD))})` : '—');
                 doughnut('fpPizzaCred', [...cm.keys()], [...cm.values()], ['#10b981','#34d399','#6ee7b7','#a7f3d0']);
                 doughnut('fpPizzaDeb', [...dm.keys()], [...dm.values()], ['#ef4444','#f87171','#fca5a5','#fecaca']);
             }
@@ -1444,7 +1296,6 @@
             function updateDebCalendar() { renderCalendar('debito', 'debCalMes', 'debCalAno', 'debCalendarGrid'); }
             function updateCredCalendar() { renderCalendar('credito', 'credCalMes', 'credCalAno', 'credCalendarGrid'); }
 
-            /* ============ INADIMPLÊNCIA MELHORADO ============ */
             function updateInadimplencia() {
                 const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
                 const pendentesRaw = [...debitos, ...creditos].filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s.includes('atraso') || s === 'false'; });
@@ -1464,18 +1315,10 @@
                 const totalPendCred = sumBy(pendCred, () => true), totalPendDeb = sumBy(pendDeb, () => true);
                 const vencidos = filt.filter(t => t.diasAtraso > 0);
                 const totalVencido = sumBy(vencidos, () => true);
-                const diasArr = vencidos.map(t => t.diasAtraso);
-                const diasMedio = Math.round(mean(diasArr));
-                const diasMediana = Math.round(median(diasArr));
-                const totalGeral = sumBy([...debitos, ...creditos], () => true);
+                const diasMedio = vencidos.length ? Math.round(vencidos.reduce((a, b) => a + b.diasAtraso, 0) / vencidos.length) : 0;
                 animKPI('inadPendCred', totalPendCred); animKPI('inadPendDeb', totalPendDeb); animKPI('inadTotalVencido', totalVencido);
                 $('inadQtdPendente').textContent = filt.length; $('inadDiasMedio').textContent = diasMedio;
                 $('badgePendentes').textContent = pendentes.length;
-                setSub('inadPendCredSub', `${pendCred.length} crédito(s) pendente(s)`);
-                setSub('inadPendDebSub', `${pendDeb.length} débito(s) pendente(s)`);
-                setSub('inadTotalVencidoSub', `${fmp(pct(totalVencido, totalGeral))} do volume total`);
-                setSub('inadQtdPendenteSub', `${fmp(pct(filt.length, [...debitos, ...creditos].length))} das transações`);
-                setSub('inadDiasMedioSub', `Mediana ${diasMediana} dias`);
                 const st = sortState.inad, sorted = sortBy(filt, st.f, st.d);
                 updArrows('inadTabela', st.f, st.d);
                 buildTable('inadTabela', sorted, (tr, t) => {
@@ -1551,7 +1394,6 @@
                 selectedDay = { ano: null, mes: null, dia: null };
             }
 
-            /* ============ COMPARATIVO ANUAL (com crescimento) ============ */
             function updateComparativoAnual() {
                 const ar = $('compAno')?.value || '';
                 const anos = [...new Set([...creditos.map(t => t.ano), ...debitos.map(t => t.ano)])].sort((a, b) => a - b);
@@ -1559,31 +1401,18 @@
                 for (const a of anos) dp[a] = { rec: sumBy(creditos.filter(t => t.ano === a), () => true), des: sumBy(debitos.filter(t => t.ano === a), () => true) };
                 const sel = dp[ar] || dp[anos[anos.length - 1]] || { rec: 0, des: 0 };
                 animKPI('compRecSel', sel.rec); animKPI('compDesSel', sel.des); animKPI('compResSel', sel.rec - sel.des);
-                setSub('compRecSelSub', `Ano ${ar || anos[anos.length-1] || '—'}`);
-                setSub('compDesSelSub', `Ano ${ar || anos[anos.length-1] || '—'}`);
-                setSub('compResSelSub', `Margem ${fmp(pct(sel.rec - sel.des, sel.rec))}`);
                 const tbody = document.querySelector('#tabelaComparativo tbody'); if (!tbody) return;
                 tbody.innerHTML = ''; const frag = document.createDocumentFragment();
-                let prevRec = null;
                 for (const a of anos) {
-                    const d = dp[a]; const res = d.rec - d.des; const margem = pct(res, d.rec);
+                    const d = dp[a]; const res = d.rec - d.des; const margem = d.rec > 0 ? ((res / d.rec) * 100) : 0;
                     const tr = document.createElement('tr');
-                    if (String(a) === String(ar)) tr.style.background = 'rgba(99,102,241,0.08)';
-                    let crescTxt = '—';
-                    if (prevRec !== null && prevRec > 0) {
-                        const g = growth(d.rec, prevRec);
-                        const cor = g > 0 ? 'var(--success)' : g < 0 ? 'var(--danger)' : 'var(--text-secondary)';
-                        const arr = g > 0 ? '▲' : g < 0 ? '▼' : '→';
-                        crescTxt = `<span style="color:${cor};font-weight:700;">${arr} ${fmp(Math.abs(g))}</span>`;
-                    }
-                    tr.innerHTML = `<td><strong>${a}</strong></td><td style="color:var(--success);">R$ ${fm(d.rec)}</td><td style="color:var(--danger);">R$ ${fm(d.des)}</td><td style="color:${res >= 0 ? 'var(--success)' : 'var(--danger)'};">R$ ${fm(res)}</td><td>${d.rec === 0 ? 'N/A' : fmp(margem)}</td><td>${crescTxt}</td>`;
+                    if (String(a) === String(ar)) tr.style.background = 'rgba(99,102,241,0.05)';
+                    tr.innerHTML = `<td><strong>${a}</strong></td><td style="color:var(--success);">R$ ${fm(d.rec)}</td><td style="color:var(--danger);">R$ ${fm(d.des)}</td><td style="color:${res >= 0 ? 'var(--success)' : 'var(--danger)'};">R$ ${fm(res)}</td><td>${d.rec === 0 ? 'N/A' : fmp(margem)}</td>`;
                     frag.appendChild(tr);
-                    prevRec = d.rec;
                 }
                 tbody.appendChild(frag);
             }
 
-            /* ============ ANÁLISE MENSAL (com crescimento) ============ */
             function updateAnaliseMensal() {
                 const anoFiltro = $('amAno')?.value || '';
                 const todos = [...creditos, ...debitos];
@@ -1598,38 +1427,28 @@
                 const chavesOrdenadas = [...mapaMensal.keys()].sort(compareMonthKeys);
                 if (chavesOrdenadas.length === 0) {
                     $('amMelhorMes').textContent = '-'; $('amPiorMes').textContent = '-'; $('amMediaMensal').textContent = 'R$ 0,00'; $('amMesesPositivos').textContent = '0';
-                    ['amMelhorMesSub','amPiorMesSub','amMediaMensalSub','amMesesPositivosSub'].forEach(id => setSub(id, '—'));
                     const tbody = document.querySelector('#tabelaAnaliseMensal tbody');
-                    if (tbody) tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Nenhum dado encontrado</td></tr>';
+                    if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Nenhum dado encontrado</td></tr>';
                     destroy('amGraficoBarras'); destroy('amGraficoAcumulado'); return;
                 }
                 const linhas = []; let acumulado = 0, melhorSaldo = -Infinity, piorSaldo = Infinity;
                 let melhorMesNome = '', piorMesNome = '', somaSaldo = 0, mesesPositivos = 0;
                 const labels = [], receitasArr = [], despesasArr = [], acumuladoArr = [];
-                let prevSaldo = null;
                 for (const chave of chavesOrdenadas) {
-                    const d = mapaMensal.get(chave); const saldo = d.rec - d.des; const margem = pct(saldo, d.rec);
+                    const d = mapaMensal.get(chave); const saldo = d.rec - d.des; const margem = d.rec > 0 ? (saldo / d.rec) * 100 : 0;
                     acumulado += saldo; somaSaldo += saldo; if (saldo > 0) mesesPositivos++;
                     const nomeMes = `${mesesAbrev[d.mes - 1]}/${d.ano}`;
-                    const deltaSaldo = prevSaldo !== null ? saldo - prevSaldo : null;
-                    linhas.push({ nomeMes, rec: d.rec, des: d.des, saldo, margem, acumulado, deltaSaldo });
+                    linhas.push({ nomeMes, rec: d.rec, des: d.des, saldo, margem, acumulado });
                     if (saldo > melhorSaldo) { melhorSaldo = saldo; melhorMesNome = nomeMes; }
                     if (saldo < piorSaldo) { piorSaldo = saldo; piorMesNome = nomeMes; }
                     labels.push(nomeMes); receitasArr.push(d.rec); despesasArr.push(d.des); acumuladoArr.push(acumulado);
-                    prevSaldo = saldo;
                 }
-                const mediaMensal = mean(linhas.map(l => l.saldo));
-                const medianMensal = median(linhas.map(l => l.saldo));
-                const desvioMensal = stdDev(linhas.map(l => l.saldo));
-                $('amMelhorMes').textContent = melhorMesNome ? `${melhorMesNome}` : '-';
-                $('amPiorMes').textContent = piorMesNome ? `${piorMesNome}` : '-';
+                const mediaMensal = somaSaldo / linhas.length;
+                $('amMelhorMes').textContent = melhorMesNome ? `${melhorMesNome} (R$ ${fm(melhorSaldo)})` : '-';
+                $('amPiorMes').textContent = piorMesNome ? `${piorMesNome} (R$ ${fm(piorSaldo)})` : '-';
                 animKPI('amMediaMensal', mediaMensal);
                 $('amMediaMensal').style.color = mediaMensal >= 0 ? 'var(--success)' : 'var(--danger)';
                 $('amMesesPositivos').textContent = `${mesesPositivos} de ${linhas.length}`;
-                setSub('amMelhorMesSub', `R$ ${fm(melhorSaldo)}`);
-                setSub('amPiorMesSub', `R$ ${fm(piorSaldo)}`);
-                setSub('amMediaMensalSub', `Mediana R$ ${fm(medianMensal)} · Desvio R$ ${fm(desvioMensal)}`);
-                setSub('amMesesPositivosSub', `${fmp(pct(mesesPositivos, linhas.length))} do período`);
                 const tbody = document.querySelector('#tabelaAnaliseMensal tbody');
                 if (tbody) {
                     tbody.innerHTML = ''; const frag = document.createDocumentFragment();
@@ -1637,14 +1456,7 @@
                         const tr = document.createElement('tr');
                         if (l.saldo === melhorSaldo) tr.classList.add('best-month');
                         if (l.saldo === piorSaldo) tr.classList.add('worst-month');
-                        let deltaTxt = '—';
-                        if (l.deltaSaldo !== null) {
-                            const up = l.deltaSaldo > 0;
-                            const cor = Math.abs(l.deltaSaldo) < 1 ? 'var(--text-secondary)' : (up ? 'var(--success)' : 'var(--danger)');
-                            const arr = Math.abs(l.deltaSaldo) < 1 ? '→' : (up ? '▲' : '▼');
-                            deltaTxt = `<span style="color:${cor};font-weight:600;">${arr} R$ ${fm(Math.abs(l.deltaSaldo))}</span>`;
-                        }
-                        tr.innerHTML = `<td><strong>${l.nomeMes}</strong></td><td style="color:var(--success);">R$ ${fm(l.rec)}</td><td style="color:var(--danger);">R$ ${fm(l.des)}</td><td style="color:${l.saldo >= 0 ? 'var(--success)' : 'var(--danger)'}; font-weight:600;">R$ ${fm(l.saldo)}</td><td>${l.rec === 0 ? 'N/A' : fmp(l.margem)}</td><td>${deltaTxt}</td><td style="color:${l.acumulado >= 0 ? 'var(--success)' : 'var(--danger)'};">R$ ${fm(l.acumulado)}</td>`;
+                        tr.innerHTML = `<td><strong>${l.nomeMes}</strong></td><td style="color:var(--success);">R$ ${fm(l.rec)}</td><td style="color:var(--danger);">R$ ${fm(l.des)}</td><td style="color:${l.saldo >= 0 ? 'var(--success)' : 'var(--danger)'}; font-weight:600;">R$ ${fm(l.saldo)}</td><td>${l.rec === 0 ? 'N/A' : fmp(l.margem)}</td><td style="color:${l.acumulado >= 0 ? 'var(--success)' : 'var(--danger)'};">R$ ${fm(l.acumulado)}</td>`;
                         frag.appendChild(tr);
                     }
                     tbody.appendChild(frag);
@@ -1659,18 +1471,15 @@
                     options: { responsive: true, maintainAspectRatio: false, plugins: { tooltip: { callbacks: { label: x => `Acumulado: R$ ${fm(x.raw)}` } } }, scales: { y: { ticks: { callback: v => `R$ ${fm(v)}` } } } } });
             }
 
-            /* ============ TOP GASTOS ============ */
+            /* ===== TOP GASTOS ===== */
             function updateTopGastos() {
                 const topDes = [...debitos].sort((a, b) => b.valor - a.valor).slice(0, 20);
                 const topRec = [...creditos].sort((a, b) => b.valor - a.valor).slice(0, 20);
                 const maiorD = topDes[0], maiorR = topRec[0];
                 $('topMaiorDeb').textContent = maiorD ? `${maiorD.descricao.substring(0, 20)} (R$ ${fm(maiorD.valor)})` : '-';
                 $('topMaiorCred').textContent = maiorR ? `${maiorR.descricao.substring(0, 20)} (R$ ${fm(maiorR.valor)})` : '-';
-                const medD = mean(debitos.map(t => t.valor)), medC = mean(creditos.map(t => t.valor));
-                const medianD = median(debitos.map(t => t.valor)), medianC = median(creditos.map(t => t.valor));
-                animKPI('topMediaDeb', medD); animKPI('topMediaCred', medC);
-                setSub('topMediaDebSub', `Mediana R$ ${fm(medianD)}`);
-                setSub('topMediaCredSub', `Mediana R$ ${fm(medianC)}`);
+                animKPI('topMediaDeb', debitos.length ? sumBy(debitos, () => true) / debitos.length : 0);
+                animKPI('topMediaCred', creditos.length ? sumBy(creditos, () => true) / creditos.length : 0);
                 bar('topDesGrafico', topDes.slice(0, 10).map(t => t.descricao.substring(0, 20)), topDes.slice(0, 10).map(t => t.valor), '#ef4444', true);
                 bar('topRecGrafico', topRec.slice(0, 10).map(t => t.descricao.substring(0, 20)), topRec.slice(0, 10).map(t => t.valor), '#10b981', true);
                 buildTable('topDesTabela', topDes, (tr, t) => {
@@ -1683,7 +1492,7 @@
                 });
             }
 
-            /* ============ DIA DA SEMANA ============ */
+            /* ===== DIA DA SEMANA ===== */
             function updateDiaSemana() {
                 const dias = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
                 const diasAbv = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
@@ -1691,8 +1500,7 @@
                 const cEnt = Array(7).fill(0), cSai = Array(7).fill(0);
                 for (const t of creditos) { const d = t.dateObj.getDay(); ent[d] += t.valor; cEnt[d]++; }
                 for (const t of debitos) { const d = t.dateObj.getDay(); sai[d] += t.valor; cSai[d]++; }
-                const totalEnt = sumBy(ent.map(v => ({ valor: v })), () => true);
-                const totalSai = sumBy(sai.map(v => ({ valor: v })), () => true);
+                const totalEnt = ent.reduce((a, b) => a + b, 0), totalSai = sai.reduce((a, b) => a + b, 0);
                 animKPI('dsTotalEnt', totalEnt); animKPI('dsTotalSai', totalSai);
                 const maxSai = Math.max(...sai);
                 const nonZero = sai.filter(v => v > 0);
@@ -1709,15 +1517,14 @@
                     tb.innerHTML = ''; const frag = document.createDocumentFragment();
                     for (let i = 0; i < 7; i++) {
                         const tr = document.createElement('tr');
-                        const ticketMed = cSai[i] ? sai[i] / cSai[i] : 0;
-                        tr.innerHTML = `<td><strong>${dias[i]}</strong></td><td style="color:var(--success)">R$ ${fm(ent[i])}</td><td style="color:var(--danger)">R$ ${fm(sai[i])}</td><td style="color:${ent[i]-sai[i]>=0?'var(--success)':'var(--danger)'}">R$ ${fm(ent[i]-sai[i])}</td><td>${cEnt[i]+cSai[i]}</td><td>R$ ${fm(ticketMed)}</td><td>${fmp(pct(sai[i], totalSai))}</td>`;
+                        tr.innerHTML = `<td><strong>${dias[i]}</strong></td><td style="color:var(--success)">R$ ${fm(ent[i])}</td><td style="color:var(--danger)">R$ ${fm(sai[i])}</td><td style="color:${ent[i]-sai[i]>=0?'var(--success)':'var(--danger)'}">R$ ${fm(ent[i]-sai[i])}</td><td>${cEnt[i]+cSai[i]}</td><td>R$ ${fm(cSai[i]?sai[i]/cSai[i]:0)}</td>`;
                         frag.appendChild(tr);
                     }
                     tb.appendChild(frag);
                 }
             }
 
-            /* ============ CENTROS DE CUSTO ============ */
+            /* ===== CENTROS DE CUSTO ===== */
             function updateCentrosCusto() {
                 const totalDes = sumBy(debitos, () => true);
                 const catMap = aggregateBy(debitos, t => t.categoria, t => t.valor);
@@ -1731,7 +1538,7 @@
                 const entries = [...catMap.entries()].sort((a, b) => b[1] - a[1]);
                 animKPI('ccTotalDes', totalDes);
                 $('ccQtd').textContent = entries.length;
-                animKPI('ccMedia', safeDiv(totalDes, entries.length));
+                animKPI('ccMedia', entries.length ? totalDes / entries.length : 0);
                 doughnut('ccGrafico', entries.slice(0, 8).map(e => e[0]), entries.slice(0, 8).map(e => e[1]),
                     ['#ef4444','#f59e0b','#10b981','#6366f1','#8b5cf6','#ec4899','#06b6d4','#f97316']);
                 const tb = document.querySelector('#ccTabela tbody');
@@ -1741,95 +1548,61 @@
                         const qtd = catQtd.get(cat);
                         const topPes = [...catPes.get(cat).entries()].sort((a, b) => b[1] - a[1])[0];
                         const tr = document.createElement('tr');
-                        tr.innerHTML = `<td><strong>${cat}</strong></td><td style="color:var(--danger);font-weight:600">R$ ${fm(tot)}</td><td>${fmp(pct(tot, totalDes))}</td><td>${qtd}</td><td>R$ ${fm(safeDiv(tot, qtd))}</td><td>${topPes?topPes[0]:'-'}</td>`;
+                        tr.innerHTML = `<td><strong>${cat}</strong></td><td style="color:var(--danger);font-weight:600">R$ ${fm(tot)}</td><td>${totalDes>0?fmp((tot/totalDes)*100):'0,0%'}</td><td>${qtd}</td><td>R$ ${fm(qtd?tot/qtd:0)}</td><td>${topPes?topPes[0]:'-'}</td>`;
                         frag.appendChild(tr);
                     }
                     tb.appendChild(frag);
                 }
             }
 
-            /* ============ SCORE FINANCEIRO (4 PILARES) ============ */
-            function calcularScoreDetalhado() {
+            /* ===== SCORE FINANCEIRO ===== */
+            function updateScore() {
                 const totRec = sumBy(creditos, () => true), totDes = sumBy(debitos, () => true);
                 const margem = totRec > 0 ? (totRec - totDes) / totRec : 0;
-
-                // Pilar 1: Rentabilidade (0-30) — margem >= 20% = full
-                const ptRent = Math.max(0, Math.min(30, (margem / 0.20) * 30));
-
-                // Pilar 2: Consistência (0-20) — % meses positivos
+                const ptMargem = Math.max(0, Math.min(25, margem * 100 / 2));
+                const ptPoup = Math.max(0, Math.min(25, margem * 100 / 2));
+                const pend = [...debitos, ...creditos].filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s === 'false'; });
+                const totPend = sumBy(pend, () => true);
+                const inadim = (totRec + totDes) > 0 ? totPend / (totRec + totDes) : 0;
+                const ptInad = Math.max(0, Math.min(25, (1 - inadim * 10) * 25));
                 const mm = new Map();
                 for (const t of [...creditos, ...debitos]) {
-                    const k = `${t.ano}-${String(t.mes).padStart(2,'0')}`;
+                    const k = `${t.ano}-${t.mes}`;
                     if (!mm.has(k)) mm.set(k, { e: 0, s: 0 });
                     const x = mm.get(k); if (t.tipo === 'credito') x.e += t.valor; else x.s += t.valor;
                 }
                 const meses = [...mm.values()];
                 const positivos = meses.filter(m => m.e - m.s > 0).length;
-                const ptCons = meses.length ? (positivos / meses.length) * 20 : 0;
-
-                // Pilar 3: Inadimplência (0-25) — 0% = full, 20%+ = 0
-                const pend = [...debitos, ...creditos].filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s === 'false'; });
-                const totPend = sumBy(pend, () => true);
-                const totalVol = totRec + totDes;
-                const inadim = totalVol > 0 ? totPend / totalVol : 0;
-                const ptInad = Math.max(0, Math.min(25, (1 - inadim / 0.20) * 25));
-
-                // Pilar 4: Crescimento (0-25) — tendência dos últimos 3 meses vs anteriores
-                const ks = [...mm.keys()].sort(compareMonthKeys);
-                let ptCresc = 12.5;
-                let crescInfo = 0;
-                if (ks.length >= 6) {
-                    const recentes = ks.slice(-3).map(k => mm.get(k).e - mm.get(k).s);
-                    const anteriores = ks.slice(-6, -3).map(k => mm.get(k).e - mm.get(k).s);
-                    const medR = mean(recentes), medA = mean(anteriores);
-                    if (Math.abs(medA) > 1) {
-                        crescInfo = growth(medR, medA) / 100;
-                        ptCresc = Math.max(0, Math.min(25, 12.5 + crescInfo * 25));
-                    }
-                }
-
-                return {
-                    score: Math.round(ptRent + ptCons + ptInad + ptCresc),
-                    ptRent, ptCons, ptInad, ptCresc,
-                    margem, inadim, positivos, totalMeses: meses.length,
-                    totRec, totDes, totPend, crescInfo
-                };
-            }
-
-            function updateScore() {
-                const d = calcularScoreDetalhado();
-                const score = d.score;
+                const ptCons = meses.length ? (positivos / meses.length) * 25 : 0;
+                const score = Math.round(ptMargem + ptPoup + ptInad + ptCons);
                 const cor = score >= 75 ? 'linear-gradient(135deg,#10b981,#34d399)' :
                             score >= 50 ? 'linear-gradient(135deg,#f59e0b,#fbbf24)' :
                             'linear-gradient(135deg,#ef4444,#f87171)';
                 const lbl = score >= 75 ? 'EXCELENTE' : score >= 50 ? 'REGULAR' : 'CRÍTICO';
                 const circle = $('scoreCircle');
-                if (circle) circle.style.background = cor;
+                if (circle) { circle.style.background = cor; }
                 $('scoreNum').textContent = score;
                 $('scoreLbl').textContent = lbl;
                 const detalhes = $('scoreDetalhes');
                 if (detalhes) {
                     const items = [
-                        { l: '💵 Rentabilidade', v: fmp(d.margem * 100), p: d.ptRent, max: 30, c: '#10b981' },
-                        { l: '📈 Consistência', v: `${d.positivos}/${d.totalMeses}`, p: d.ptCons, max: 20, c: '#6366f1' },
-                        { l: '⚠️ Inadimplência', v: fmp(d.inadim * 100), p: d.ptInad, max: 25, c: '#f59e0b' },
-                        { l: '🚀 Crescimento', v: `${d.crescInfo >= 0 ? '+' : ''}${fmp(d.crescInfo * 100)}`, p: d.ptCresc, max: 25, c: '#8b5cf6' }
+                        { l: '💵 Margem Líquida', v: fmp(margem * 100), p: ptMargem },
+                        { l: '💰 Taxa de Poupança', v: fmp(margem * 100), p: ptPoup },
+                        { l: '⚠️ Inadimplência', v: fmp(inadim * 100), p: ptInad },
+                        { l: '📈 Consistência Mensal', v: `${positivos} de ${meses.length}`, p: ptCons }
                     ];
                     detalhes.innerHTML = items.map(it => `
-                        <div class="score-item" style="flex-direction:column;align-items:stretch;">
-                            <div style="display:flex;justify-content:space-between;align-items:center;">
-                                <div class="score-item-lbl">${it.l} <span style="color:var(--text-secondary);font-weight:500">(${it.v})</span></div>
-                                <div class="score-item-val" style="color:${it.c}">${it.p.toFixed(1)}/${it.max}</div>
-                            </div>
-                            <div class="score-bar"><div class="score-bar-fill" style="width:${(it.p/it.max)*100}%;background:${it.c}"></div></div>
+                        <div class="score-item">
+                            <div class="score-item-lbl">${it.l} <span style="color:var(--text-secondary);font-weight:500">(${it.v})</span></div>
+                            <div class="score-item-val">${it.p.toFixed(1)}/25</div>
                         </div>
                     `).join('');
                 }
-                bar('scoreGrafico', ['Rentabilidade','Consistência','Inadimplência','Crescimento'],
-                    [d.ptRent, d.ptCons, d.ptInad, d.ptCresc], ['#10b981','#6366f1','#f59e0b','#8b5cf6']);
+                bar('scoreGrafico', ['Margem','Poupança','Inadimplência','Consistência'],
+                    [ptMargem, ptPoup, ptInad, ptCons], ['#6366f1','#10b981','#f59e0b','#8b5cf6']);
             }
 
-            /* ============ MATRIZ CAT × MÊS ============ */
+            /* ===== MATRIZ CAT × MÊS ===== */
             function updateMatriz() {
                 const ano = $('matrizAno')?.value || '';
                 const tipo = $('matrizTipo')?.value || 'debito';
@@ -1864,23 +1637,28 @@
                 }
             }
 
-            /* ============ RELATÓRIO EXECUTIVO ============ */
+            /* ================================================================ */
+            /* ===== RELATÓRIO EXECUTIVO MELHORADO ============================ */
+            /* ================================================================ */
             function updateExecutivo() {
                 const all = [...creditos, ...debitos];
                 const totRec = sumBy(creditos, () => true);
                 const totDes = sumBy(debitos, () => true);
                 const res = totRec - totDes;
-                const mg = pct(res, totRec);
+                const mg = totRec > 0 ? (res / totRec) * 100 : 0;
+
                 const agora = new Date();
                 if ($('execData')) {
                     $('execData').textContent = `Gerado em ${agora.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })} às ${agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
                 }
-                const scoreData = calcularScoreDetalhado();
+
+                const score = calcularScore();
                 const statusBadge = $('execStatusBadge');
                 if (statusBadge) {
-                    const statusLabel = scoreData.score >= 75 ? '🟢 SAUDÁVEL' : scoreData.score >= 50 ? '🟡 ATENÇÃO' : '🔴 CRÍTICO';
-                    statusBadge.textContent = `STATUS: ${statusLabel} • SCORE ${scoreData.score}/100`;
+                    const statusLabel = score >= 75 ? '🟢 SAUDÁVEL' : score >= 50 ? '🟡 ATENÇÃO' : '🔴 CRÍTICO';
+                    statusBadge.textContent = `STATUS: ${statusLabel} • SCORE ${score}/100`;
                 }
+
                 const mm = new Map();
                 for (const t of all) {
                     const k = `${t.ano}-${String(t.mes).padStart(2,'0')}`;
@@ -1890,23 +1668,27 @@
                     e.qtd++;
                 }
                 const ks = [...mm.keys()].sort(compareMonthKeys);
+
                 const ultimoK = ks[ks.length - 1];
                 const penultimoK = ks[ks.length - 2];
                 const ultimo = ultimoK ? mm.get(ultimoK) : null;
                 const penultimo = penultimoK ? mm.get(penultimoK) : null;
+
                 const mesesAtivos = ks.length;
-                const mediaRec = safeDiv(totRec, mesesAtivos);
-                const mediaDes = safeDiv(totDes, mesesAtivos);
-                const ticketMedio = safeDiv(totRec + totDes, all.length);
+                const mediaRec = mesesAtivos ? totRec / mesesAtivos : 0;
+                const mediaDes = mesesAtivos ? totDes / mesesAtivos : 0;
+                const ticketMedio = all.length ? (totRec + totDes) / all.length : 0;
                 const pend = all.filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s === 'false'; });
                 const totPend = sumBy(pend, () => true);
+
                 let varRec = 0, varDes = 0, varRes = 0;
                 if (ultimo && penultimo) {
-                    varRec = growth(ultimo.rec, penultimo.rec);
-                    varDes = growth(ultimo.des, penultimo.des);
+                    varRec = penultimo.rec > 0 ? ((ultimo.rec - penultimo.rec) / penultimo.rec) * 100 : 0;
+                    varDes = penultimo.des > 0 ? ((ultimo.des - penultimo.des) / penultimo.des) * 100 : 0;
                     const resU = ultimo.rec - ultimo.des, resP = penultimo.rec - penultimo.des;
-                    varRes = growth(resU, resP);
+                    varRes = resP !== 0 ? ((resU - resP) / Math.abs(resP)) * 100 : 0;
                 }
+
                 const kpis = [
                     { k: '💰 Receita Total', v: `R$ ${fm(totRec)}`, sub: `${creditos.length} entradas`, trend: varRec, trendLabel: 'vs mês anterior', color: 'var(--success)' },
                     { k: '📤 Despesa Total', v: `R$ ${fm(totDes)}`, sub: `${debitos.length} saídas`, trend: varDes, trendLabel: 'vs mês anterior', color: 'var(--danger)', invertTrend: true },
@@ -1934,35 +1716,43 @@
                         </div>`;
                     }).join('');
                 }
-                // Alertas
+
                 const alertas = [];
                 if (mg < 0) alertas.push({ tipo: 'danger', icon: '🚨', texto: `<strong>Operação deficitária:</strong> A margem está negativa em <strong>${fmp(mg)}</strong>. As despesas superam as receitas em <strong>R$ ${fm(Math.abs(res))}</strong>. Recomenda-se revisar urgentemente os gastos.` });
                 else if (mg < 10) alertas.push({ tipo: 'warn', icon: '⚠️', texto: `<strong>Margem apertada:</strong> A margem de <strong>${fmp(mg)}</strong> está abaixo do ideal (mínimo recomendado: 20%). Há pouco espaço para imprevistos.` });
                 else if (mg >= 20) alertas.push({ tipo: 'ok', icon: '✅', texto: `<strong>Margem saudável:</strong> A margem de <strong>${fmp(mg)}</strong> indica boa eficiência operacional. Continue monitorando.` });
-                const inadimPct = pct(totPend, totRec + totDes);
+
+                const inadimPct = (totRec + totDes) > 0 ? (totPend / (totRec + totDes)) * 100 : 0;
                 if (inadimPct > 10) alertas.push({ tipo: 'danger', icon: '💸', texto: `<strong>Inadimplência alta:</strong> <strong>R$ ${fm(totPend)}</strong> (${fmp(inadimPct)} do volume) estão pendentes em <strong>${pend.length} transações</strong>. Priorize a cobrança.` });
                 else if (inadimPct > 5) alertas.push({ tipo: 'warn', icon: '⏳', texto: `<strong>Atenção à inadimplência:</strong> <strong>R$ ${fm(totPend)}</strong> em ${pend.length} transações pendentes. Monitore de perto.` });
+
                 if (ultimo && penultimo && varDes > 15) alertas.push({ tipo: 'warn', icon: '📈', texto: `<strong>Despesas em alta:</strong> As despesas cresceram <strong>${fmp(varDes)}</strong> no último mês. Revise os principais aumentos.` });
+
                 if (ultimo && penultimo && varRec < -10) alertas.push({ tipo: 'danger', icon: '📉', texto: `<strong>Queda de receita:</strong> A receita caiu <strong>${fmp(Math.abs(varRec))}</strong> no último mês. Investigue as causas.` });
+
                 const catMap = aggregateBy(debitos, t => t.categoria, t => t.valor);
                 const catArr = [...catMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (catArr.length && totDes > 0) {
-                    const topPct = pct(catArr[0][1], totDes);
+                    const topPct = (catArr[0][1] / totDes) * 100;
                     if (topPct > 40) alertas.push({ tipo: 'warn', icon: '🎯', texto: `<strong>Concentração elevada:</strong> A categoria <strong>${catArr[0][0]}</strong> representa <strong>${fmp(topPct)}</strong> das despesas. Considere diversificar ou renegociar.` });
                 }
+
                 const pesMap = aggregateBy(debitos, t => t.pessoa, t => t.valor);
                 const pesArr = [...pesMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (pesArr.length && totDes > 0) {
-                    const topPct = pct(pesArr[0][1], totDes);
+                    const topPct = (pesArr[0][1] / totDes) * 100;
                     if (topPct > 30) alertas.push({ tipo: 'info', icon: '👤', texto: `<strong>Dependência de fornecedor:</strong> <strong>${pesArr[0][0]}</strong> concentra <strong>${fmp(topPct)}</strong> das despesas. Avalie riscos de dependência.` });
                 }
+
                 const mesesNeg = ks.filter(k => (mm.get(k).rec - mm.get(k).des) < 0).length;
                 if (mesesNeg > 0 && ks.length > 0) {
-                    const p = pct(mesesNeg, ks.length);
-                    if (p > 40) alertas.push({ tipo: 'danger', icon: '📅', texto: `<strong>Meses no vermelho:</strong> <strong>${mesesNeg} de ${ks.length}</strong> meses tiveram resultado negativo. Sinal de instabilidade financeira.` });
-                    else if (p > 20) alertas.push({ tipo: 'warn', icon: '📅', texto: `<strong>${mesesNeg} mês(es) negativo(s)</strong> no período analisado. Fique atento à recorrência.` });
+                    const pct = (mesesNeg / ks.length) * 100;
+                    if (pct > 40) alertas.push({ tipo: 'danger', icon: '📅', texto: `<strong>Meses no vermelho:</strong> <strong>${mesesNeg} de ${ks.length}</strong> meses tiveram resultado negativo. Sinal de instabilidade financeira.` });
+                    else if (pct > 20) alertas.push({ tipo: 'warn', icon: '📅', texto: `<strong>${mesesNeg} mês(es) negativo(s)</strong> no período analisado. Fique atento à recorrência.` });
                 }
+
                 if (!alertas.length) alertas.push({ tipo: 'ok', icon: '🎉', texto: 'Nenhum alerta crítico identificado. A situação financeira está sob controle.' });
+
                 const alertCount = $('execAlertCount');
                 if (alertCount) alertCount.textContent = alertas.length;
                 const alertasEl = $('execAlertas');
@@ -1974,7 +1764,7 @@
                         </div>
                     `).join('');
                 }
-                // Insights
+
                 const insights = [];
                 if (ks.length >= 3) {
                     const recArr = ks.map(k => mm.get(k).rec);
@@ -1983,8 +1773,9 @@
                     const rd = linearRegression(desArr.map((v, i) => [i, v]));
                     const tendRec = rr.b > 0 ? 'crescente' : 'decrescente';
                     const tendDes = rd.b > 0 ? 'crescente' : 'decrescente';
-                    insights.push(`<strong>📈 Tendência:</strong> A receita apresenta tendência <strong>${tendRec}</strong> (confiança ${rr.conf}) enquanto as despesas seguem tendência <strong>${tendDes}</strong> (confiança ${rd.conf}). ${rr.b > 0 && rd.b < 0 ? 'Cenário ideal: receita subindo e despesa caindo.' : rr.b < 0 && rd.b > 0 ? 'Cenário de atenção: receita caindo e despesa subindo.' : 'Monitore a evolução nos próximos meses.'}`);
+                    insights.push(`<strong>📈 Tendência:</strong> A receita apresenta tendência <strong>${tendRec}</strong> enquanto as despesas seguem tendência <strong>${tendDes}</strong>. ${rr.b > 0 && rd.b < 0 ? 'Cenário ideal: receita subindo e despesa caindo.' : rr.b < 0 && rd.b > 0 ? 'Cenário de atenção: receita caindo e despesa subindo.' : 'Monitore a evolução nos próximos meses.'}`);
                 }
+
                 const szMap = Array(12).fill(0).map(() => ({ rec: 0, des: 0, count: 0 }));
                 for (const t of all) {
                     const idx = t.mes - 1;
@@ -1996,28 +1787,32 @@
                 if (melhorMes && piorMes && melhorMes.m !== piorMes.m) {
                     insights.push(`<strong>📅 Sazonalidade:</strong> Historicamente, <strong>${mesesNom[melhorMes.m]}</strong> é o melhor mês (saldo médio positivo) e <strong>${mesesNom[piorMes.m]}</strong> é o mais desafiador. Planeje com antecedência.`);
                 }
+
                 const diasSem = Array(7).fill(0);
                 for (const t of debitos) diasSem[t.dateObj.getDay()] += t.valor;
                 const diasNomes = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
                 const idxMaior = diasSem.indexOf(Math.max(...diasSem));
                 insights.push(`<strong>📆 Comportamento:</strong> As despesas se concentram principalmente na <strong>${diasNomes[idxMaior]}</strong>, com R$ ${fm(diasSem[idxMaior])} acumulados. ${idxMaior === 1 || idxMaior === 5 ? 'Reflexo típico de pagamentos de início/fim de semana.' : ''}`);
+
                 const fpMap = aggregateBy(debitos, t => t.formaPagamento || 'Não informado', t => t.valor);
                 const fpArr = [...fpMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (fpArr.length) {
-                    const p = pct(fpArr[0][1], totDes);
-                    insights.push(`<strong>💳 Pagamentos:</strong> A forma mais utilizada é <strong>${fpArr[0][0]}</strong> (${fmp(p)} das despesas). ${p > 60 ? 'Alta dependência de uma única forma — avalie diversificar.' : 'Boa diversificação de formas de pagamento.'}`);
+                    const pct = totDes > 0 ? (fpArr[0][1] / totDes) * 100 : 0;
+                    insights.push(`<strong>💳 Pagamentos:</strong> A forma mais utilizada é <strong>${fpArr[0][0]}</strong> (${fmp(pct)} das despesas). ${pct > 60 ? 'Alta dependência de uma única forma — avalie diversificar.' : 'Boa diversificação de formas de pagamento.'}`);
                 }
+
                 const banMap = aggregateBy(debitos, t => t.banco, t => t.valor);
                 const banArr = [...banMap.entries()].sort((a, b) => b[1] - a[1]);
                 if (banArr.length > 1) {
-                    const p = pct(banArr[0][1], totDes);
-                    insights.push(`<strong>🏦 Bancos:</strong> O banco <strong>${banArr[0][0]}</strong> concentra <strong>${fmp(p)}</strong> das saídas. ${p > 70 ? 'Considere distribuir melhor para reduzir riscos.' : 'Distribuição razoável entre instituições.'}`);
+                    const pct = totDes > 0 ? (banArr[0][1] / totDes) * 100 : 0;
+                    insights.push(`<strong>🏦 Bancos:</strong> O banco <strong>${banArr[0][0]}</strong> concentra <strong>${fmp(pct)}</strong> das saídas. ${pct > 70 ? 'Considere distribuir melhor para reduzir riscos.' : 'Distribuição razoável entre instituições.'}`);
                 }
+
                 const insightsEl = $('execInsights');
                 if (insightsEl) {
                     insightsEl.innerHTML = insights.map(i => `<div class="exec-insight">${i}</div>`).join('');
                 }
-                // Comparativo
+
                 const cmpEl = $('execComparativo');
                 if (cmpEl && ultimo && penultimo) {
                     const mesU = `${mesesAbrev[ultimo.mes-1]}/${ultimo.ano}`;
@@ -2060,7 +1855,7 @@
                 } else if (cmpEl) {
                     cmpEl.innerHTML = '<div class="exec-insight">Dados insuficientes para comparativo entre meses.</div>';
                 }
-                // Gráfico 12 meses
+
                 const labels12 = ks.slice(-12).map(k => { const [y, m] = k.split('-'); return `${mesesAbrev[+m-1]}/${y.slice(2)}`; });
                 const rec12 = ks.slice(-12).map(k => mm.get(k).rec);
                 const des12 = ks.slice(-12).map(k => mm.get(k).des);
@@ -2069,68 +1864,78 @@
                 if (cG) {
                     charts['execGraficoMensal'] = new Chart(cG, {
                         type: 'bar',
-                        data: { labels: labels12, datasets: [
-                            { label: 'Receitas', data: rec12, backgroundColor: '#10b981', borderRadius: 6 },
-                            { label: 'Despesas', data: des12, backgroundColor: '#ef4444', borderRadius: 6 },
-                            { label: 'Resultado', data: res12, type: 'line', borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.1)', fill: false, tension: 0.4, pointRadius: 4, borderWidth: 2.5, yAxisID: 'y' }
-                        ] },
-                        options: { responsive: true, maintainAspectRatio: false,
+                        data: {
+                            labels: labels12,
+                            datasets: [
+                                { label: 'Receitas', data: rec12, backgroundColor: '#10b981', borderRadius: 6 },
+                                { label: 'Despesas', data: des12, backgroundColor: '#ef4444', borderRadius: 6 },
+                                { label: 'Resultado', data: res12, type: 'line', borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.1)', fill: false, tension: 0.4, pointRadius: 4, borderWidth: 2.5, yAxisID: 'y' }
+                            ]
+                        },
+                        options: {
+                            responsive: true, maintainAspectRatio: false,
                             plugins: { tooltip: { callbacks: { label: x => `${x.dataset.label}: R$ ${fm(x.raw)}` } } },
-                            scales: { y: { ticks: { callback: v => `R$ ${fm(v)}` } } } }
+                            scales: { y: { ticks: { callback: v => `R$ ${fm(v)}` } } }
+                        }
                     });
                 }
+
                 doughnut('execGraficoPizza', catArr.slice(0, 7).map(e => e[0]), catArr.slice(0, 7).map(e => e[1]),
                     ['#ef4444','#f59e0b','#10b981','#6366f1','#8b5cf6','#ec4899','#06b6d4']);
+
                 const topCatEl = $('execTopCat');
                 if (topCatEl) {
                     topCatEl.innerHTML = catArr.slice(0, 8).map(([c, v], i) => {
-                        const p = pct(v, totDes);
+                        const pct = totDes > 0 ? (v / totDes) * 100 : 0;
                         const colors = ['#ef4444','#f97316','#f59e0b','#10b981','#06b6d4','#6366f1','#8b5cf6','#ec4899'];
                         return `<li>
                             <span class="rank-badge" style="background:${colors[i]}">${i+1}</span>
                             <div class="exec-bar-wrap">
                                 <div style="display:flex;justify-content:space-between;gap:8px;">
                                     <span class="lbl">${c}</span>
-                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(p)})</span></span>
+                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pct)})</span></span>
                                 </div>
-                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, p)}%;background:${colors[i]}"></div></div>
+                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pct)}%;background:${colors[i]}"></div></div>
                             </div>
                         </li>`;
                     }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
+
                 const topPesEl = $('execTopPes');
                 if (topPesEl) {
                     topPesEl.innerHTML = pesArr.slice(0, 8).map(([p, v], i) => {
-                        const pc = pct(v, totDes);
+                        const pct = totDes > 0 ? (v / totDes) * 100 : 0;
                         return `<li>
                             <span class="rank-badge" style="background:${i < 3 ? '#ef4444' : '#94a3b8'}">${i+1}</span>
                             <div class="exec-bar-wrap">
                                 <div style="display:flex;justify-content:space-between;gap:8px;">
                                     <span class="lbl">${p}</span>
-                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pc)})</span></span>
+                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pct)})</span></span>
                                 </div>
-                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pc)}%;background:${i < 3 ? '#ef4444' : '#94a3b8'}"></div></div>
+                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pct)}%;background:${i < 3 ? '#ef4444' : '#94a3b8'}"></div></div>
                             </div>
                         </li>`;
                     }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
+
                 const topBanEl = $('execTopBan');
                 if (topBanEl) {
                     const totalBan = banArr.reduce((a, b) => a + b[1], 0);
                     topBanEl.innerHTML = banArr.slice(0, 6).map(([b, v], i) => {
-                        const pc = pct(v, totalBan);
+                        const pct = totalBan > 0 ? (v / totalBan) * 100 : 0;
                         return `<li>
                             <span class="rank-badge" style="background:${i < 3 ? '#6366f1' : '#94a3b8'}">${i+1}</span>
                             <div class="exec-bar-wrap">
                                 <div style="display:flex;justify-content:space-between;gap:8px;">
                                     <span class="lbl">${b}</span>
-                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pc)})</span></span>
+                                    <span class="val">R$ ${fm(v)} <span class="val-sub">(${fmp(pct)})</span></span>
                                 </div>
-                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pc)}%;background:${i < 3 ? '#6366f1' : '#94a3b8'}"></div></div>
+                                <div class="exec-bar-bg"><div class="exec-bar-fill" style="width:${Math.min(100, pct)}%;background:${i < 3 ? '#6366f1' : '#94a3b8'}"></div></div>
                             </div>
                         </li>`;
                     }).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
+
                 const ordemMeses = ks.map(k => ({ k, saldo: mm.get(k).rec - mm.get(k).des, rec: mm.get(k).rec, des: mm.get(k).des, ano: mm.get(k).ano, mes: mm.get(k).mes }));
                 const melhores = [...ordemMeses].sort((a, b) => b.saldo - a.saldo).slice(0, 5);
                 const piores = [...ordemMeses].sort((a, b) => a.saldo - b.saldo).slice(0, 5);
@@ -2154,12 +1959,13 @@
                         </li>
                     `).join('') || '<li style="color:var(--text-secondary)">Sem dados</li>';
                 }
+
                 const tbody = document.querySelector('#execTabela tbody');
                 if (tbody) {
                     tbody.innerHTML = ''; const frag = document.createDocumentFragment();
                     const ult12 = ks.slice(-12);
                     ult12.forEach((k, idx) => {
-                        const d = mm.get(k); const s = d.rec - d.des; const m = pct(s, d.rec);
+                        const d = mm.get(k); const s = d.rec - d.des; const m = d.rec > 0 ? (s / d.rec) * 100 : 0;
                         let tendHtml = '—';
                         if (idx > 0) {
                             const ant = mm.get(ult12[idx - 1]);
@@ -2176,9 +1982,27 @@
                 }
             }
 
-            function calcularScore() { return calcularScoreDetalhado().score; }
+            function calcularScore() {
+                const totRec = sumBy(creditos, () => true), totDes = sumBy(debitos, () => true);
+                const margem = totRec > 0 ? (totRec - totDes) / totRec : 0;
+                const ptMargem = Math.max(0, Math.min(25, margem * 100 / 2));
+                const ptPoup = Math.max(0, Math.min(25, margem * 100 / 2));
+                const pend = [...debitos, ...creditos].filter(t => { const s = (t.status || '').toLowerCase(); return s.includes('pendente') || s.includes('vencido') || s === 'false'; });
+                const totPend = sumBy(pend, () => true);
+                const inadim = (totRec + totDes) > 0 ? totPend / (totRec + totDes) : 0;
+                const ptInad = Math.max(0, Math.min(25, (1 - inadim * 10) * 25));
+                const mm = new Map();
+                for (const t of [...creditos, ...debitos]) {
+                    const k = `${t.ano}-${t.mes}`;
+                    if (!mm.has(k)) mm.set(k, { e: 0, s: 0 });
+                    const x = mm.get(k); if (t.tipo === 'credito') x.e += t.valor; else x.s += t.valor;
+                }
+                const meses = [...mm.values()];
+                const positivos = meses.filter(m => m.e - m.s > 0).length;
+                const ptCons = meses.length ? (positivos / meses.length) * 25 : 0;
+                return Math.round(ptMargem + ptPoup + ptInad + ptCons);
+            }
 
-            /* ============ EVENTS ============ */
             function bindEvents(pref, fn) {
                 ['Categoria','Pessoa','Status','FormaPagamento','Banco','Ano','Mes','Dia','Tipo'].forEach(s => {
                     const el = $(pref + s);
@@ -2246,6 +2070,8 @@
             function imprimir() { window.print(); }
             $('printBtn').onclick = imprimir;
             $('printBtnSide').onclick = imprimir;
+            $('darkModeToggle').onclick = () => { document.body.classList.toggle('dark'); localStorage.setItem('darkMode', document.body.classList.contains('dark')); };
+            if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark');
 
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.onclick = () => {
@@ -2274,8 +2100,9 @@
             headerClicks('inadTabela', 'inad', updateInadimplencia);
 
             document.addEventListener('keydown', e => {
-                if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
                 if (e.key.toLowerCase() === 'r') loadData();
+                else if (e.key.toLowerCase() === 'd') $('darkModeToggle').click();
                 else if (e.key.toLowerCase() === 'p') imprimir();
             });
 
